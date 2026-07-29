@@ -74,9 +74,10 @@ nav a{
 nav a:hover{
     color:#ffd54f;
 }
-
 .hero{
-    background:linear-gradient(rgba(0,51,102,.75),rgba(0,51,102,.75)),url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80');
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+        url("images/hero-banner.jpg");
     background-size:cover;
     background-position:center;
     min-height:90vh;
@@ -85,25 +86,21 @@ nav a:hover{
 }
 
 .hero-content{
-    color:white;
     text-align:center;
+    color:white;
 }
 
 .hero h1{
-    font-size:48px;
-    margin-bottom:15px;
-}
-
-.hero h2{
-    font-size:28px;
+    font-size:54px;
     margin-bottom:20px;
-    color:#ffd54f;
+    font-weight:700;
 }
 
 .hero p{
-    font-size:18px;
-    max-width:700px;
+    max-width:750px;
     margin:auto;
+    font-size:20px;
+    line-height:1.8;
 }
 
 .hero-buttons{
