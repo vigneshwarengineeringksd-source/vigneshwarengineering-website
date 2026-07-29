@@ -171,3 +171,40 @@ font-size:28px;
 }
 
 }
+.brands{
+    padding:70px 20px;
+    background:#f5f8fc;
+}
+
+.brands h2{
+    text-align:center;
+    color:#003366;
+    margin-bottom:30px;
+}
+
+.brand-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.brand-card{
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.brand-card:hover{
+    transform:translateY(-5px);
+}
+
+.brand-card img{
+    max-width:100%;
+    max-height:80px;
+    object-fit:contain;
+}
