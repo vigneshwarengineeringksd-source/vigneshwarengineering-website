@@ -96,48 +96,57 @@ nav a:hover{
 }
 
 .hero-content{
-    text-align:center;
-    color:white;
+    max-width:650px;
+    text-align:left;
+    margin-left:80px;
+    color:#fff;
+
 }
 
 .hero h1{
-    color:#fff;
-    font-size:60px;
+    font-size:52px;
     font-weight:700;
-    text-shadow:0 4px 10px rgba(0,0,0,.5);
+    line-height:1.2;
+    margin-bottom:20px;
+    color:#fff;
+    text-shadow:0 5px 15px rgba(0,0,0,.8);
 }
+
 
 .hero p{
+    font-size:20px;
+    line-height:1.8;
     color:#fff;
-    font-size:22px;
-    text-shadow:0 2px 8px rgba(0,0,0,.5);
+    max-width:550px;
+    text-shadow:0 3px 8px rgba(0,0,0,.7);
 }
-
 .hero-buttons{
     margin-top:35px;
+    display:flex;
+    gap:15px;
 }
 
 .btn{
-    display:inline-block;
     background:#ff9800;
-    color:white;
-    padding:14px 28px;
+    color:#fff;
+    padding:14px 30px;
     border-radius:8px;
     text-decoration:none;
-    margin:10px;
+    font-weight:600;
     transition:.3s;
 }
 
 .btn:hover{
     background:#e68900;
+    transform:translateY(-3px);
 }
 
-.secondary{
-    background:#009688;
+.btn.secondary{
+    background:#25D366;
 }
 
-.secondary:hover{
-    background:#00796b;
+.btn.secondary:hover{
+    background:#1da851;
 }
 .about,
 .products,
