@@ -78,8 +78,12 @@ nav a:hover{
 }
 .hero{
     background:
-        linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)),
-        url("images/hero-banner.png");
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.35)
+    ),
+    url("images/hero-banner.png");
+
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -87,7 +91,8 @@ nav a:hover{
     display:flex;
     align-items:center;
     justify-content:center;
-}
+    text-align:center;
+
 }
 
 .hero-content{
@@ -96,16 +101,16 @@ nav a:hover{
 }
 
 .hero h1{
-    font-size:54px;
-    margin-bottom:20px;
+    color:#fff;
+    font-size:60px;
     font-weight:700;
+    text-shadow:0 4px 10px rgba(0,0,0,.5);
 }
 
 .hero p{
-    max-width:750px;
-    margin:auto;
-    font-size:20px;
-    line-height:1.8;
+    color:#fff;
+    font-size:22px;
+    text-shadow:0 2px 8px rgba(0,0,0,.5);
 }
 
 .hero-buttons{
