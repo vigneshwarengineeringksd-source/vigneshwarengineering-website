@@ -61,28 +61,31 @@ header{
     font-size:14px;
 }
 
-}
+
 
 nav a{
-    color:white;
+    color:#ffffff;
     text-decoration:none;
     margin-left:25px;
-    font-weight:500;
+    font-size:17px;
+    font-weight:600;
     transition:.3s;
 }
 
 nav a:hover{
     color:#ffd54f;
+
 }
 .hero{
     background:
-        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-        url("images/hero-banner.png");
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("images/hero-banner.jpg");
     background-size:cover;
     background-position:center;
     min-height:90vh;
     display:flex;
     align-items:center;
+
 }
 
 .hero-content{
