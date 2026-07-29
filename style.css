@@ -78,14 +78,16 @@ nav a:hover{
 }
 .hero{
     background:
-    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-    url("images/hero-banner.jpg");
+        linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.20)),
+        url("images/hero-banner.jpg");
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
     min-height:90vh;
     display:flex;
     align-items:center;
-
+    justify-content:center;
+}
 }
 
 .hero-content{
