@@ -352,3 +352,37 @@ html{
     color:#0d47a1;
     margin-bottom:15px;
 }
+.brand-slider{
+    overflow:hidden;
+    width:100%;
+    background:#fff;
+    padding:20px 0;
+}
+
+.brand-track{
+    display:flex;
+    width:max-content;
+    animation:scroll 25s linear infinite;
+}
+
+.brand-track img{
+    width:150px;
+    height:90px;
+    object-fit:contain;
+    margin:0 30px;
+    transition:.3s;
+}
+
+.brand-track img:hover{
+    transform:scale(1.1);
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
