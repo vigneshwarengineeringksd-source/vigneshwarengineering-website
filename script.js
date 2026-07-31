@@ -15,3 +15,6 @@ document.querySelectorAll('nav a').forEach(link => {
 
 // Future features can be added here
 console.log("Vigneshwar Engineering Industrial website loaded successfully.");
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("show");
+}
