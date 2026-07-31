@@ -473,3 +473,73 @@ html{
     margin:40px auto;
     padding:0 20px;
 }
+/* ==========================
+   MOBILE RESPONSIVE DESIGN
+========================== */
+
+@media (max-width: 768px) {
+
+  nav{
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .hero{
+    height: auto;
+    padding: 100px 20px 70px;
+    text-align: center;
+  }
+
+  .hero h1{
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .hero p{
+    font-size: 17px;
+  }
+
+  .hero-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    align-items:center;
+  }
+
+  .products-grid,
+  .brands-grid,
+  .features,
+  .footer-content{
+    grid-template-columns:1fr;
+  }
+
+  .contact-box{
+    width:95%;
+  }
+
+  iframe{
+    height:250px;
+  }
+
+  section{
+    padding:60px 20px;
+  }
+
+  .logo img{
+    width:55px;
+    height:55px;
+  }
+
+  .logo h2{
+    font-size:22px;
+  }
+
+}
