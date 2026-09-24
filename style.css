@@ -418,38 +418,27 @@ body{
     .feature-item h3 {
         font-size: 11px;
     }
-/* HERO FEATURE STRIP */
-
-.hero{
-    position:relative;
-}
-
-.hero-features{
+hero-features{
     position:absolute;
-    left:0;
     bottom:0;
-
-    width:54%;
-    height:120px;
-
+    left:0;
+    width:100%;
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    align-items:center;
-
-    z-index:20;
+    grid-template-columns:repeat(4, 1fr);
+    background:rgba(10, 45, 95, 0.95);
+    padding:18px 30px;
+    box-sizing:border-box;
+    z-index:5;
 }
 
 .hero-feature{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:10px;
-
-    padding:0 12px;
-
+    gap:12px;
     color:white;
-
-    border-right:1px solid rgba(255,255,255,0.55);
+    padding:8px 15px;
+    border-right:1px solid rgba(255,255,255,0.5);
 }
 
 .hero-feature:last-child{
@@ -457,39 +446,21 @@ body{
 }
 
 .feature-icon{
-    width:44px;
-    height:44px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border:2px solid white;
-    border-radius:50%;
-
+    font-size:28px;
     color:white;
-    font-size:20px;
-
-    flex-shrink:0;
+    min-width:35px;
+    text-align:center;
 }
 
 .hero-feature strong{
     display:block;
-
+    font-size:15px;
     color:white;
-
-    font-size:12px;
-    font-weight:700;
-
-    line-height:1.25;
 }
 
 .hero-feature small{
     display:block;
-
-    color:white;
-
-    font-size:9px;
-
-    margin-top:4px;
+    font-size:11px;
+    color:#dce8f5;
+    margin-top:3px;
 }
