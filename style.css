@@ -415,7 +415,18 @@ body{
     .feature-item h3 {
         font-size: 11px;
     }
+/* HERO BANNER */
+.hero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
     .feature-item p {
         font-size: 10px;
     }
