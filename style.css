@@ -128,15 +128,15 @@ body{
 ================================ */
 
 .hero{
-    min-height:650px;
+    width:100%;
+    aspect-ratio:1536 / 706;
 
     background-image:url("images/hero.png");
-    background-size:cover;
+    background-size:100% 100%;
     background-position:center;
     background-repeat:no-repeat;
 
-    display:flex;
-    align-items:center;
+    position:relative;
 }
 
 .hero-content{
@@ -290,10 +290,7 @@ body{
         font-size:12px;
     }
 
-    .hero{
-        min-height:650px;
-        background-position:65% center;
-        align-items:flex-start;
+    art;
     }
 
     .hero-content{
@@ -322,7 +319,13 @@ body{
     .btn{
         width:200px;
     }
-
+.hero{
+    min-height:auto;
+    aspect-ratio:1536 / 706;
+    background-size:100% 100%;
+    background-position:center;
+}
+}
 }
 /* ================================
    FEATURE STRIP
