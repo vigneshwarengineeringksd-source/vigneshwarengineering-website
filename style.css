@@ -912,7 +912,17 @@ nav a:hover {
     .product-grid {
         grid-template-columns: 1fr;
     }
+.product-image {
+    height: 230px;
+}
 
+.product-content {
+    padding: 22px;
+}
+
+.product-content h3 {
+    font-size: 20px;
+}
 
     /* BRANDS */
 
