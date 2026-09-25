@@ -762,7 +762,7 @@ nav a:hover {
     .hero-text {
         width: 100%;
         padding: 55px 0 180px;
-        background: rgba(255,255,255,0.88);
+        background: rgba(255,255,255,0.78);
     }
 
     .hero-small-title {
@@ -904,7 +904,7 @@ nav a:hover {
     }
 
     .footer-logo {
-        width: 190px;
+        width: 150px;
     }
 
 }
