@@ -548,124 +548,280 @@ product-card {
 
 }
 /* =====================================================
+
    BRANDS - PROFESSIONAL
+
    ===================================================== */
 
+
+
 .brands {
+
     background: #ffffff;
+
     overflow: hidden;
+
 }
+
+
 
 .brands .section-heading {
+
     margin-bottom: 40px;
+
 }
 
 
-/* BRAND LOGO AREA */
 
-.brand-slider {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
 
-.brand-track {
-    display: flex;
-    align-items: center;
+
+/* BRAND GRID */
+
+
+
+.brand-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
     gap: 22px;
-    width: max-content;
+
+    align-items: stretch;
+
 }
+
+
+
 
 
 /* BRAND CARD */
 
+
+
 .brand-card {
-    width: 180px;
-    height: 110px;
-    flex: 0 0 180px;
+
+    height: 115px;
 
     background: #ffffff;
-    border: 1px solid #d9dee7;
+
+
+
+    border: 1px solid #dfe4eb;
+
     border-radius: 12px;
 
+
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
+
 
     padding: 18px;
 
+
+
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
 
+
+
     transition:
+
         transform 0.3s ease,
+
         border-color 0.3s ease,
+
         box-shadow 0.3s ease;
+
 }
+
+
+
 
 
 /* BRAND LOGO */
 
+
+
 .brand-card img {
-    max-width: 135px;
-    max-height: 65px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
+
     display: block;
 
+
+
+    max-width: 145px;
+
+    max-height: 65px;
+
+
+
+    width: auto;
+
+    height: auto;
+
+
+
+    object-fit: contain;
+
+
+
     transition: transform 0.3s ease;
+
 }
 
 
-/* HOVER */
+
+
+
+/* HOVER EFFECT */
+
+
 
 .brand-card:hover {
+
     transform: translateY(-5px);
+
     border-color: #102d63;
-    box-shadow: 0 12px 25px rgba(16, 45, 99, 0.12);
+
+    box-shadow: 0 12px 25px rgba(16, 45, 99, 0.14);
+
 }
+
+
 
 .brand-card:hover img {
+
     transform: scale(1.05);
+
 }
 
 
-/* MOBILE */
+
+
+
+/* =====================================================
+
+   BRANDS - TABLET
+
+   ===================================================== */
+
+
+
+@media (max-width: 1000px) {
+
+
+
+    .brand-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+
+    }
+
+
+
+}
+
+
+
+
+
+/* =====================================================
+
+   BRANDS - MOBILE
+
+   ===================================================== */
+
+
 
 @media (max-width: 768px) {
 
-    .brand-card {
-        width: 155px;
-        height: 95px;
-        flex-basis: 155px;
-        padding: 15px;
+
+
+    .brand-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 16px;
+
     }
 
-    .brand-card img {
-        max-width: 115px;
-        max-height: 55px;
+
+
+    .brand-card {
+
+        height: 105px;
+
+        padding: 15px;
+
     }
+
+
+
+    .brand-card img {
+
+        max-width: 125px;
+
+        max-height: 58px;
+
+    }
+
+
 
 }
 
 
-/* SMALL PHONES */
+
+
+
+/* =====================================================
+
+   BRANDS - SMALL PHONES
+
+   ===================================================== */
+
+
 
 @media (max-width: 480px) {
 
-    .brand-card {
-        width: 140px;
-        height: 90px;
-        flex-basis: 140px;
+
+
+    .brand-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+
     }
+
+
+
+    .brand-card {
+
+        height: 95px;
+
+        padding: 12px;
+
+    }
+
+
 
     .brand-card img {
+
         max-width: 105px;
+
         max-height: 50px;
+
     }
 
-}
 
+
+}
 /* =====================================================
    WHY CHOOSE US
    ===================================================== */
