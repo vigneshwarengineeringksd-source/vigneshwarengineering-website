@@ -342,23 +342,24 @@ nav a:hover {
     align-items: stretch;
 }
 
-.product-card {
+product-card {
     background: #ffffff;
-    border: 1px solid #d9dee7;
+    border: 1px solid #d5dbe5;
     border-radius: 12px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
 }
 
-product-card:hover {
+.product-card:hover {
     transform: translateY(-6px);
     border-color: #102d63;
     box-shadow: 0 14px 30px rgba(16, 45, 99, 0.14);
 }
-
 
 /* PRODUCT IMAGE */
 
