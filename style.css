@@ -355,42 +355,81 @@ nav a:hover {
 }
 
 
+/* =====================================================
+   PRODUCTS - PROFESSIONAL CATALOGUE
+   ===================================================== */
+
+.products {
+    background: #f4f6f9;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #e1e6ed;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+
 /* PRODUCT IMAGE */
 
 .product-image {
     width: 100%;
     height: 260px;
     overflow: hidden;
-    background: #eeeeee;
+    background: #f1f3f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .product-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
-
-.product-content {
-    padding: 25px;
-
-
 .product-card:hover .product-image img {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 
 /* PRODUCT CONTENT */
 
+.product-content {
+    padding: 24px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
 .product-category {
     display: inline-block;
     color: #ed3b16;
     font-size: 11px;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 1.4px;
     margin-bottom: 9px;
+    text-transform: uppercase;
 }
 
 .product-content h3 {
@@ -403,7 +442,7 @@ nav a:hover {
 .product-content p {
     color: #667085;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.65;
     margin-bottom: 18px;
 }
 
@@ -412,16 +451,17 @@ nav a:hover {
     color: #102d63;
     font-size: 14px;
     font-weight: 800;
-    transition: 0.3s;
+    margin-top: auto;
+    transition: 0.3s ease;
 }
 
 .product-link:hover {
     color: #ed3b16;
-    transform: translateX(3px);
+    transform: translateX(4px);
 }
 
 
-/* FEATURED STONE CUTTING MACHINE */
+/* FEATURED PRODUCT */
 
 .product-card-featured {
     border: 2px solid #102d63;
@@ -439,13 +479,15 @@ nav a:hover {
     padding: 30px;
     background: #102d63;
     color: white;
-    border-radius: 10px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(16, 45, 99, 0.15);
 }
 
 .products-note strong {
     display: block;
     font-size: 23px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .products-note p {
@@ -457,11 +499,11 @@ nav a:hover {
     display: inline-block;
     background: #ed3b16;
     color: white;
-    padding: 13px 22px;
+    padding: 13px 24px;
     border-radius: 6px;
     font-size: 14px;
     font-weight: 700;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .catalogue-button:hover {
@@ -469,6 +511,69 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
+
+/* =====================================================
+   PRODUCTS - TABLET
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   PRODUCTS - MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .product-image {
+        height: 230px;
+    }
+
+    .product-content {
+        padding: 21px;
+    }
+
+    .product-content h3 {
+        font-size: 20px;
+    }
+
+    .products-note {
+        padding: 25px 20px;
+    }
+
+}
+
+
+/* =====================================================
+   PRODUCTS - SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .product-image {
+        height: 220px;
+    }
+
+    .product-content {
+        padding: 19px;
+    }
+
+    .product-content h3 {
+        font-size: 19px;
+    }
+
+}
 /* =====================================================
    BRANDS
    ===================================================== */
