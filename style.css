@@ -579,7 +579,7 @@ product-card {
 
 /* BRAND CARD */
 
-.brand-item {
+.brand-card {
     width: 180px;
     height: 110px;
     flex: 0 0 180px;
@@ -605,7 +605,7 @@ product-card {
 
 /* BRAND LOGO */
 
-.brand-item img {
+.brand-card img {
     max-width: 135px;
     max-height: 65px;
     width: auto;
@@ -619,13 +619,13 @@ product-card {
 
 /* HOVER */
 
-.brand-item:hover {
+.brand-card:hover {
     transform: translateY(-5px);
     border-color: #102d63;
     box-shadow: 0 12px 25px rgba(16, 45, 99, 0.12);
 }
 
-.brand-item:hover img {
+.brand-card:hover img {
     transform: scale(1.05);
 }
 
@@ -634,14 +634,14 @@ product-card {
 
 @media (max-width: 768px) {
 
-    .brand-item {
+    .brand-card {
         width: 155px;
         height: 95px;
         flex-basis: 155px;
         padding: 15px;
     }
 
-    .brand-item img {
+    .brand-card img {
         max-width: 115px;
         max-height: 55px;
     }
@@ -653,13 +653,13 @@ product-card {
 
 @media (max-width: 480px) {
 
-    .brand-item {
+    .brand-card {
         width: 140px;
         height: 90px;
         flex-basis: 140px;
     }
 
-    .brand-item img {
+    .brand-card img {
         max-width: 105px;
         max-height: 50px;
     }
