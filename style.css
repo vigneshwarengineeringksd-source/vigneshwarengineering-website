@@ -548,45 +548,123 @@ product-card {
 
 }
 /* =====================================================
-   BRANDS
+   BRANDS - PROFESSIONAL
    ===================================================== */
 
 .brands {
-    background: white;
+    background: #ffffff;
+    overflow: hidden;
 }
 
-.brand-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+.brands .section-heading {
+    margin-bottom: 40px;
 }
 
-.brand-card {
-    height: 130px;
-    background: white;
-    border: 1px solid #e0e5ec;
-    border-radius: 8px;
+
+/* BRAND LOGO AREA */
+
+.brand-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.brand-track {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    width: max-content;
+}
+
+
+/* BRAND CARD */
+
+.brand-item {
+    width: 180px;
+    height: 110px;
+    flex: 0 0 180px;
+
+    background: #ffffff;
+    border: 1px solid #d9dee7;
+    border-radius: 12px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
+    padding: 18px;
 
-    transition: 0.3s;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.brand-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
 
-.brand-card img {
-    max-width: 100%;
-    max-height: 80px;
+/* BRAND LOGO */
+
+.brand-item img {
+    max-width: 135px;
+    max-height: 65px;
+    width: auto;
+    height: auto;
     object-fit: contain;
+    display: block;
+
+    transition: transform 0.3s ease;
 }
 
+
+/* HOVER */
+
+.brand-item:hover {
+    transform: translateY(-5px);
+    border-color: #102d63;
+    box-shadow: 0 12px 25px rgba(16, 45, 99, 0.12);
+}
+
+.brand-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .brand-item {
+        width: 155px;
+        height: 95px;
+        flex-basis: 155px;
+        padding: 15px;
+    }
+
+    .brand-item img {
+        max-width: 115px;
+        max-height: 55px;
+    }
+
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 480px) {
+
+    .brand-item {
+        width: 140px;
+        height: 90px;
+        flex-basis: 140px;
+    }
+
+    .brand-item img {
+        max-width: 105px;
+        max-height: 50px;
+    }
+
+}
 
 /* =====================================================
    WHY CHOOSE US
