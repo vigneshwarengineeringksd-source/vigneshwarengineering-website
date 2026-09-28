@@ -1,12 +1,7 @@
-/* =====================================================
+/* =========================================================
    VIGNESHWAR ENGINEERING INDUSTRIAL
-   COMPLETE CLEAN WEBSITE STYLESHEET
-   ===================================================== */
-
-
-/* =====================================================
-   RESET
-   ===================================================== */
+   CLEAN MASTER STYLESHEET
+   ========================================================= */
 
 * {
     margin: 0;
@@ -26,8 +21,8 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 img {
@@ -37,30 +32,29 @@ img {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
 }
 
 
-/* =====================================================
+/* =========================================================
    HEADER
-   ===================================================== */
+   ========================================================= */
 
-.site-header,
-header {
+.site-header {
+    height: 78px;
     background: #102d63;
     color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.16);
 }
 
-.nav-container,
-header .container {
-    min-height: 72px;
+.nav-container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1120px;
+    height: 100%;
     margin: 0 auto;
 
     display: flex;
@@ -79,11 +73,9 @@ header .container {
     flex-shrink: 0;
 }
 
-.logo img,
-header img {
-    width: auto;
-    height: 52px;
-    max-height: 52px;
+.logo img {
+    width: 58px;
+    height: 58px;
     object-fit: contain;
 }
 
@@ -94,32 +86,29 @@ header img {
 }
 
 .logo-text strong {
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 800;
     letter-spacing: 1px;
-    color: #ffffff;
 }
 
 .logo-text span {
+    margin-top: 5px;
+    color: #dce5f5;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 1.5px;
-    margin-top: 4px;
-    color: #dce5f5;
 }
 
 
 /* NAVIGATION */
 
-nav,
-header nav {
+.site-header nav {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-nav a,
-header nav a {
+.site-header nav a {
     position: relative;
     color: #ffffff;
     font-size: 14px;
@@ -128,25 +117,25 @@ header nav a {
     transition: color 0.25s ease;
 }
 
-nav a::after,
-header nav a::after {
+.site-header nav a::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
+
     width: 0;
     height: 2px;
+
     background: #ed3b16;
+
     transition: width 0.25s ease;
 }
 
-nav a:hover,
-header nav a:hover {
-    color: #dbe7ff;
+.site-header nav a:hover {
+    color: #dce7fa;
 }
 
-nav a:hover::after,
-header nav a:hover::after {
+.site-header nav a:hover::after {
     width: 100%;
 }
 
@@ -155,87 +144,74 @@ header nav a:hover::after {
 
 .menu-toggle {
     display: none;
-    border: none;
+
+    border: 0;
     background: transparent;
+
     color: #ffffff;
     font-size: 30px;
+
     cursor: pointer;
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-   ===================================================== */
+   ========================================================= */
 
 .hero {
     min-height: 650px;
+
     position: relative;
 
     background-image: url("images/hero.png");
     background-size: cover;
-    background-position: center;
+    background-position: center right;
     background-repeat: no-repeat;
 
     overflow: hidden;
 }
 
-
-/* Make sure no unwanted overlay appears */
-
-.hero::before,
-.hero::after {
-    content: none !important;
-    display: none !important;
-}
-
-
-/* HERO CONTENT */
-
 .hero-content {
-    position: relative;
-    z-index: 2;
-
     width: 90%;
-    max-width: 1200px;
+    max-width: 1120px;
     min-height: 650px;
 
     margin: 0 auto;
 
     display: flex;
     align-items: center;
+
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text {
-    width: 52%;
-    max-width: 620px;
+    width: 53%;
+    max-width: 610px;
 
-    padding: 70px 0 140px;
+    padding: 55px 0 135px;
 }
-
-
-/* SMALL TITLE */
 
 .hero-small-title {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1px;
-
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
     color: #17233c;
+
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
 }
 
-
-/* MAIN HEADING */
-
 .hero h1 {
-    font-size: 48px;
-    line-height: 1.05;
-
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 
     color: #17233c;
+
+    font-size: 48px;
     font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -0.5px;
 }
 
 .hero h1 span {
@@ -243,18 +219,15 @@ header nav a:hover::after {
     color: #ed3b16;
 }
 
-
-/* HERO DESCRIPTION */
-
 .hero-text p {
-    max-width: 620px;
+    max-width: 600px;
 
-    font-size: 17px;
+    margin-bottom: 28px;
+
+    color: #4d5a6e;
+
+    font-size: 16px;
     line-height: 1.7;
-
-    color: #26344d;
-
-    margin-bottom: 30px;
 }
 
 
@@ -262,34 +235,29 @@ header nav a:hover::after {
 
 .hero-buttons {
     display: flex;
-    gap: 18px;
     flex-wrap: wrap;
-
-    position: relative;
-    z-index: 3;
+    gap: 14px;
 }
 
 .btn {
+    min-width: 165px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    min-width: 170px;
+    padding: 14px 23px;
 
-    padding: 15px 25px;
+    border-radius: 7px;
 
-    border-radius: 6px;
-
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
 
     transition:
         transform 0.25s ease,
-        background 0.25s ease;
+        background 0.25s ease,
+        box-shadow 0.25s ease;
 }
-
-
-/* CALL BUTTON */
 
 .btn-call {
     background: #102d63;
@@ -299,10 +267,8 @@ header nav a:hover::after {
 .btn-call:hover {
     background: #071a3c;
     transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(16, 45, 99, 0.22);
 }
-
-
-/* WHATSAPP BUTTON */
 
 .btn-whatsapp {
     background: #f05a16;
@@ -312,12 +278,13 @@ header nav a:hover::after {
 .btn-whatsapp:hover {
     background: #d94308;
     transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(240, 90, 22, 0.22);
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO FEATURE STRIP
-   ===================================================== */
+   ========================================================= */
 
 .hero-features {
     position: absolute;
@@ -325,15 +292,15 @@ header nav a:hover::after {
     right: 0;
     bottom: 0;
 
-    width: 100%;
-    min-height: 105px;
+    min-height: 100px;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    padding: 18px 5%;
+    padding: 15px 5%;
 
     background: rgba(7, 37, 82, 0.96);
+
     color: #ffffff;
 
     z-index: 5;
@@ -344,11 +311,11 @@ header nav a:hover::after {
     align-items: center;
     justify-content: center;
 
-    gap: 14px;
+    gap: 13px;
 
-    padding: 10px 20px;
+    padding: 10px 18px;
 
-    border-right: 1px solid rgba(255, 255, 255, 0.35);
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .hero-feature:last-child {
@@ -356,69 +323,74 @@ header nav a:hover::after {
 }
 
 .feature-icon {
-    width: 46px;
-    height: 46px;
+    width: 45px;
+    height: 45px;
 
-    border: 2px solid #ffffff;
-    border-radius: 50%;
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 22px;
-    flex-shrink: 0;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 21px;
 }
 
 .hero-feature strong {
     display: block;
 
-    font-size: 15px;
     color: #ffffff;
+
+    font-size: 14px;
 }
 
 .hero-feature small {
     display: block;
 
-    margin-top: 3px;
+    margin-top: 2px;
+
+    color: #dce5f5;
 
     font-size: 11px;
-    color: #dce5f5;
 }
 
 
-/* =====================================================
+/* =========================================================
    GENERAL SECTIONS
-   ===================================================== */
+   ========================================================= */
 
 .section {
-    padding: 90px 0;
+    padding: 85px 0;
 }
 
 .section-heading {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
 }
 
 .section-heading > span {
     display: block;
 
+    margin-bottom: 8px;
+
     color: #ed3b16;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 800;
-
     letter-spacing: 1.5px;
-
-    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .section-heading h2 {
-    font-size: 38px;
-    line-height: 1.2;
+    margin-bottom: 12px;
 
     color: #17233c;
 
-    margin-bottom: 12px;
+    font-size: 37px;
+    line-height: 1.2;
 }
 
 .section-heading p {
@@ -428,9 +400,9 @@ header nav a:hover::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    ABOUT
-   ===================================================== */
+   ========================================================= */
 
 .about {
     background: #ffffff;
@@ -441,16 +413,17 @@ header nav a:hover::after {
 }
 
 .about-text p {
-    font-size: 17px;
+    margin-bottom: 18px;
+
     color: #4c586b;
 
-    margin-bottom: 18px;
+    font-size: 16px;
 }
 
 
-/* =====================================================
+/* =========================================================
    PRODUCTS
-   ===================================================== */
+   ========================================================= */
 
 .products {
     background: #f4f6f9;
@@ -459,29 +432,25 @@ header nav a:hover::after {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    gap: 28px;
-
+    gap: 26px;
     align-items: stretch;
 }
 
 
-/* IMPORTANT:
-   This is .product-card, not product-card
-*/
+/* IMPORTANT: .product-card */
 
 .product-card {
-    background: #ffffff;
-
-    border: 1px solid #d5dbe5;
-    border-radius: 12px;
-
-    overflow: hidden;
-
     display: flex;
     flex-direction: column;
 
-    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #d8dee8;
+    border-radius: 12px;
+
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
 
     transition:
         transform 0.3s ease,
@@ -490,12 +459,11 @@ header nav a:hover::after {
 }
 
 .product-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 
     border-color: #102d63;
 
-    box-shadow:
-        0 14px 30px rgba(16, 45, 99, 0.14);
+    box-shadow: 0 14px 30px rgba(16, 45, 99, 0.13);
 }
 
 
@@ -503,15 +471,15 @@ header nav a:hover::after {
 
 .product-image {
     width: 100%;
-    height: 260px;
-
-    overflow: hidden;
-
-    background: #f1f3f6;
+    height: 255px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    overflow: hidden;
+
+    background: #f1f3f6;
 }
 
 .product-image img {
@@ -531,135 +499,122 @@ header nav a:hover::after {
 /* PRODUCT CONTENT */
 
 .product-content {
-    padding: 24px 24px 26px;
+    flex: 1;
 
     display: flex;
     flex-direction: column;
 
-    flex: 1;
+    padding: 23px;
 }
 
 .product-category {
     display: inline-block;
 
+    margin-bottom: 8px;
+
     color: #ed3b16;
 
     font-size: 11px;
     font-weight: 800;
-
-    letter-spacing: 1.4px;
-
-    margin-bottom: 9px;
-
+    letter-spacing: 1.3px;
     text-transform: uppercase;
 }
 
 .product-content h3 {
-    font-size: 21px;
-    line-height: 1.3;
+    margin-bottom: 10px;
 
     color: #17233c;
 
-    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.3;
 }
 
 .product-content p {
+    margin-bottom: 17px;
+
     color: #667085;
 
     font-size: 14px;
     line-height: 1.65;
-
-    margin-bottom: 18px;
 }
 
 .product-link {
-    display: inline-block;
+    margin-top: auto;
 
     color: #102d63;
 
     font-size: 14px;
     font-weight: 800;
 
-    margin-top: auto;
-
-    transition: 0.3s ease;
+    transition: 0.25s ease;
 }
 
 .product-link:hover {
     color: #ed3b16;
-
     transform: translateX(4px);
 }
 
 
-/* FEATURED PRODUCT */
-
-.product-card-featured {
-    border: 1px solid #d9dee7;
-}
-
-
-/* PRODUCT RANGE NOTE */
+/* PRODUCT NOTE */
 
 .products-note {
-    margin-top: 45px;
+    margin-top: 42px;
 
-    padding: 30px;
+    padding: 28px;
 
     background: #102d63;
+
     color: #ffffff;
 
     border-radius: 12px;
 
     text-align: center;
 
-    box-shadow:
-        0 8px 25px rgba(16, 45, 99, 0.15);
+    box-shadow: 0 8px 25px rgba(16, 45, 99, 0.15);
 }
 
 .products-note strong {
     display: block;
 
-    font-size: 23px;
-
     margin-bottom: 6px;
+
+    font-size: 22px;
 }
 
 .products-note p {
-    color: #dce5f5;
+    margin-bottom: 19px;
 
-    margin-bottom: 20px;
+    color: #dce5f5;
 }
 
 .catalogue-button {
     display: inline-block;
 
+    padding: 12px 23px;
+
     background: #ed3b16;
     color: #ffffff;
-
-    padding: 13px 24px;
 
     border-radius: 6px;
 
     font-size: 14px;
     font-weight: 700;
 
-    transition: 0.3s ease;
+    transition: 0.25s ease;
 }
 
 .catalogue-button:hover {
     background: #d94308;
-
     transform: translateY(-2px);
 }
 
 
-/* =====================================================
+/* =========================================================
    BRANDS
-   ===================================================== */
+   ========================================================= */
 
 .brands {
-    padding: 55px 25px;
+    padding: 48px 0;
 
     background: #f8f9fb;
 
@@ -667,84 +622,68 @@ header nav a:hover::after {
 }
 
 .brands .section-heading {
-    text-align: center;
-
     max-width: 650px;
 
-    margin: 0 auto 30px;
+    margin: 0 auto 28px;
+
+    text-align: center;
 }
 
 .brands .section-heading > span {
-    display: block;
-
     margin-bottom: 7px;
 
-    font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
     color: #b8860b;
+
+    font-size: 11px;
+    letter-spacing: 2px;
 }
 
 .brands .section-heading h2 {
     margin: 0;
 
-    font-size: 30px;
-    line-height: 1.2;
-    font-weight: 800;
-
     color: #182238;
+
+    font-size: 30px;
 }
 
 .brands .section-heading p {
     margin: 9px auto 0;
 
-    font-size: 14px;
-    line-height: 1.6;
-
     color: #6b7280;
+
+    font-size: 14px;
 }
 
 
 /* BRAND GRID */
 
-.brands .brand-grid {
+.brand-grid {
     width: 100%;
     max-width: 1000px;
 
     margin: 0 auto;
 
     display: grid;
-
     grid-template-columns: repeat(5, 1fr);
 
     gap: 12px;
 }
 
-
-/* BRAND CARD */
-
-.brands .brand-card {
-    position: relative;
-
+.brand-card {
     height: 95px;
-
-    padding: 12px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding: 12px;
 
     background: #ffffff;
 
     border: 1px solid #e1e5eb;
     border-radius: 11px;
 
-    box-shadow:
-        0 4px 14px rgba(0, 0, 0, 0.045);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.045);
 
     overflow: hidden;
 
@@ -754,12 +693,7 @@ header nav a:hover::after {
         box-shadow 0.3s ease;
 }
 
-
-/* BRAND LOGOS */
-
-.brands .brand-card img {
-    display: block;
-
+.brand-card img {
     width: 140px;
     height: 58px;
 
@@ -769,112 +703,79 @@ header nav a:hover::after {
     transition: transform 0.3s ease;
 }
 
-
-/* INDIVIDUAL LOGO SIZES */
-
-.brands .brand-card img[alt="HCH"] {
-    width: 105px;
-    height: 45px;
-    transform: scale(1.35);
-}
-
-.brands .brand-card img[alt="STL"] {
-    width: 110px;
-    height: 48px;
-    transform: scale(1.15);
-}
-
-.brands .brand-card img[alt="Orlin"] {
-    width: 115px;
-    height: 48px;
-}
-
-.brands .brand-card img[alt="Diamond"] {
-    width: 120px;
-    height: 48px;
-}
-
-.brands .brand-card img[alt="Castrol"] {
-    width: 120px;
-    height: 48px;
-    transform: scale(1.25);
-}
-
-.brands .brand-card img[alt="HP Lubricants"] {
-    width: 120px;
-    height: 50px;
-}
-
-.brands .brand-card img[alt="Texspin"] {
-    width: 120px;
-    height: 50px;
-    transform: scale(1.30);
-}
-
-.brands .brand-card img[alt="JK Pioneer"] {
-    width: 125px;
-    height: 50px;
-}
-
-.brands .brand-card img[alt="Kay Vee"] {
-    width: 125px;
-    height: 50px;
-}
-
-
-/* BRAND HOVER */
-
-.brands .brand-card:hover {
+.brand-card:hover {
     transform: translateY(-4px);
 
     border-color: #102d63;
 
-    box-shadow:
-        0 10px 22px rgba(16, 45, 99, 0.12);
+    box-shadow: 0 10px 22px rgba(16, 45, 99, 0.12);
 }
 
-.brands .brand-card:hover img {
-    transform: scale(1.08);
-}
-
-
-/* Preserve special logo scaling on hover */
-
-.brands .brand-card:hover img[alt="HCH"] {
-    transform: scale(1.40);
-}
-
-.brands .brand-card:hover img[alt="STL"] {
-    transform: scale(1.20);
-}
-
-.brands .brand-card:hover img[alt="Texspin"] {
-    transform: scale(1.35);
-}
-
-.brands .brand-card:hover img[alt="Castrol"] {
-    transform: scale(1.30);
+.brand-card:hover img {
+    transform: scale(1.06);
 }
 
 
-/* =====================================================
+/* INDIVIDUAL LOGO SIZES */
+
+.brand-card img[alt="HCH"] {
+    width: 105px;
+    height: 45px;
+}
+
+.brand-card img[alt="STL"] {
+    width: 110px;
+    height: 48px;
+}
+
+.brand-card img[alt="Orlin"] {
+    width: 115px;
+    height: 48px;
+}
+
+.brand-card img[alt="Diamond"] {
+    width: 120px;
+    height: 48px;
+}
+
+.brand-card img[alt="Castrol"] {
+    width: 120px;
+    height: 48px;
+}
+
+.brand-card img[alt="HP Lubricants"] {
+    width: 120px;
+    height: 50px;
+}
+
+.brand-card img[alt="Texspin"] {
+    width: 120px;
+    height: 50px;
+}
+
+.brand-card img[alt="JK Pioneer"] {
+    width: 125px;
+    height: 50px;
+}
+
+.brand-card img[alt="Kay Vee"] {
+    width: 125px;
+    height: 50px;
+}
+
+
+/* =========================================================
    WHY CHOOSE US
-   ===================================================== */
+   ========================================================= */
 
 .why-us {
-    background: #f7f9fc;
-
     padding: 70px 0;
-}
 
-.why-us .container {
-    max-width: 1120px;
-    margin: 0 auto;
+    background: #f7f9fc;
 }
 
 .why-grid {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
 
     gap: 18px;
@@ -883,16 +784,16 @@ header nav a:hover::after {
 }
 
 .why-card {
-    background: #ffffff;
+    min-height: 190px;
+
+    position: relative;
 
     padding: 26px 22px;
 
+    background: #ffffff;
+
     border: 1px solid #e5e9f2;
     border-radius: 14px;
-
-    text-align: left;
-
-    position: relative;
 
     overflow: hidden;
 
@@ -906,7 +807,6 @@ header nav a:hover::after {
     content: "";
 
     position: absolute;
-
     top: 0;
     left: 0;
 
@@ -916,7 +816,6 @@ header nav a:hover::after {
     background: #102d63;
 
     transform: scaleX(0);
-
     transform-origin: left;
 
     transition: transform 0.25s ease;
@@ -927,8 +826,7 @@ header nav a:hover::after {
 
     border-color: #cfd8e8;
 
-    box-shadow:
-        0 12px 30px rgba(16, 45, 99, 0.10);
+    box-shadow: 0 12px 30px rgba(16, 45, 99, 0.10);
 }
 
 .why-card:hover::before {
@@ -939,31 +837,29 @@ header nav a:hover::after {
     width: 48px;
     height: 48px;
 
-    border-radius: 11px;
-
-    background: #102d63;
-    color: #ffffff;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
+    margin-bottom: 17px;
+
+    background: #102d63;
+
+    color: #ffffff;
+
+    border-radius: 11px;
+
     font-size: 20px;
 
-    margin-bottom: 18px;
-
-    box-shadow:
-        0 6px 15px rgba(16, 45, 99, 0.16);
+    box-shadow: 0 6px 15px rgba(16, 45, 99, 0.16);
 }
 
 .why-card h3 {
+    margin-bottom: 8px;
+
     color: #102d63;
 
-    font-size: 18px;
-    font-weight: 700;
-
-    margin: 0 0 9px;
-
+    font-size: 17px;
     line-height: 1.35;
 }
 
@@ -971,32 +867,24 @@ header nav a:hover::after {
     color: #667085;
 
     font-size: 13.5px;
-    line-height: 1.65;
-
-    margin: 0;
+    line-height: 1.6;
 }
 
 
-/* =====================================================
+/* =========================================================
    ENQUIRY
-   ===================================================== */
+   ========================================================= */
 
 .enquiry {
+    padding: 38px 0;
+
     background: #102d63;
 
     color: #ffffff;
-
-    padding: 38px 0;
-}
-
-.enquiry .container {
-    max-width: 1120px;
-    margin: 0 auto;
 }
 
 .enquiry-box {
     display: flex;
-
     align-items: center;
     justify-content: space-between;
 
@@ -1010,37 +898,32 @@ header nav a:hover::after {
 .enquiry-box span {
     display: block;
 
+    margin-bottom: 6px;
+
     color: #d8e3f7;
 
     font-size: 11px;
     font-weight: 700;
-
     letter-spacing: 1.4px;
-
-    margin-bottom: 7px;
 }
 
 .enquiry-box h2 {
+    margin-bottom: 7px;
+
     color: #ffffff;
 
     font-size: 27px;
     line-height: 1.2;
-    font-weight: 700;
-
-    margin: 0 0 7px;
 }
 
 .enquiry-box p {
     color: #dce5f5;
 
     font-size: 13px;
-
-    margin: 0;
 }
 
 .enquiry-buttons {
     display: flex;
-
     gap: 10px;
 
     flex-shrink: 0;
@@ -1054,11 +937,6 @@ header nav a:hover::after {
     border-radius: 7px;
 
     font-size: 13px;
-    font-weight: 600;
-
-    text-align: center;
-
-    transition: all 0.25s ease;
 }
 
 .enquiry-buttons .btn-call {
@@ -1068,8 +946,6 @@ header nav a:hover::after {
 
 .enquiry-buttons .btn-call:hover {
     background: #eef3fa;
-
-    transform: translateY(-2px);
 }
 
 .enquiry-buttons .btn-whatsapp {
@@ -1079,14 +955,12 @@ header nav a:hover::after {
 
 .enquiry-buttons .btn-whatsapp:hover {
     background: #10b957;
-
-    transform: translateY(-2px);
 }
 
 
-/* =====================================================
+/* =========================================================
    CONTACT
-   ===================================================== */
+   ========================================================= */
 
 .contact {
     background: #ffffff;
@@ -1094,7 +968,6 @@ header nav a:hover::after {
 
 .contact-grid {
     display: grid;
-
     grid-template-columns: 1fr 1.2fr;
 
     gap: 50px;
@@ -1104,7 +977,6 @@ header nav a:hover::after {
 
 .contact-info {
     display: flex;
-
     flex-direction: column;
 
     gap: 25px;
@@ -1113,17 +985,17 @@ header nav a:hover::after {
 .contact-item strong {
     display: block;
 
-    font-size: 18px;
+    margin-bottom: 5px;
 
     color: #17233c;
 
-    margin-bottom: 5px;
+    font-size: 18px;
 }
 
 .contact-item p {
-    color: #596579;
-
     margin: 2px 0;
+
+    color: #596579;
 }
 
 .contact-item a {
@@ -1134,45 +1006,39 @@ header nav a:hover::after {
     color: #ed3b16;
 }
 
-
-/* MAP */
-
 .map {
     min-height: 400px;
 
-    border-radius: 10px;
-
     overflow: hidden;
 
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
 }
 
 .map iframe {
     width: 100%;
     height: 100%;
-
     min-height: 400px;
 
     border: 0;
 }
 
 
-/* =====================================================
+/* =========================================================
    FOOTER
-   ===================================================== */
+   ========================================================= */
 
 .footer {
+    padding-top: 60px;
+
     background: #07152f;
 
     color: #ffffff;
-
-    padding-top: 60px;
 }
 
 .footer-grid {
     display: grid;
-
     grid-template-columns: 1.5fr 1fr 1fr;
 
     gap: 50px;
@@ -1182,29 +1048,28 @@ header nav a:hover::after {
 
 .footer-logo {
     width: 220px;
-    height: auto;
 
     margin-bottom: 20px;
 }
 
 .footer p {
-    color: #c8d1df;
-
     margin-bottom: 8px;
+
+    color: #c8d1df;
 }
 
 .footer h3 {
-    font-size: 19px;
-
     margin-bottom: 15px;
+
+    font-size: 19px;
 }
 
 .footer a {
     display: block;
 
-    color: #c8d1df;
-
     margin-bottom: 8px;
+
+    color: #c8d1df;
 }
 
 .footer a:hover {
@@ -1212,9 +1077,9 @@ header nav a:hover::after {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-
     padding: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 
     text-align: center;
 
@@ -1224,9 +1089,9 @@ header nav a:hover::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    FLOATING WHATSAPP
-   ===================================================== */
+   ========================================================= */
 
 .floating-whatsapp {
     position: fixed;
@@ -1237,19 +1102,19 @@ header nav a:hover::after {
     width: 58px;
     height: 58px;
 
-    border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
     background: #25d366;
+
     color: #ffffff;
+
+    border-radius: 50%;
 
     font-size: 27px;
 
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 
     z-index: 2000;
 
@@ -1261,14 +1126,18 @@ header nav a:hover::after {
 }
 
 
-/* =====================================================
+/* =========================================================
    TABLET
-   ===================================================== */
+   ========================================================= */
 
 @media (max-width: 1000px) {
 
     .hero h1 {
         font-size: 40px;
+    }
+
+    .hero-text {
+        width: 55%;
     }
 
     .product-grid {
@@ -1279,19 +1148,19 @@ header nav a:hover::after {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .brands .brand-grid {
+    .brand-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .enquiry-box {
-        gap: 25px;
+    .footer-grid {
+        grid-template-columns: 1.3fr 1fr 1fr;
     }
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE
-   ===================================================== */
+   ========================================================= */
 
 @media (max-width: 768px) {
 
@@ -1302,8 +1171,12 @@ header nav a:hover::after {
 
     /* HEADER */
 
-    .nav-container,
-    header .container {
+    .site-header {
+        height: auto;
+        min-height: 70px;
+    }
+
+    .nav-container {
         width: 92%;
 
         min-height: 70px;
@@ -1313,11 +1186,9 @@ header nav a:hover::after {
         padding: 10px 0;
     }
 
-    .logo img,
-    header img {
-        width: auto;
+    .logo img {
+        width: 48px;
         height: 48px;
-        max-height: 48px;
     }
 
     .logo-text strong {
@@ -1325,15 +1196,14 @@ header nav a:hover::after {
     }
 
     .logo-text span {
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .menu-toggle {
         display: block;
     }
 
-    nav,
-    header nav {
+    .site-header nav {
         display: none;
 
         width: 100%;
@@ -1342,31 +1212,21 @@ header nav a:hover::after {
 
         gap: 0;
 
-        background: #102d63;
-
         padding: 8px 0 12px;
     }
 
-    nav.show,
-    header nav.show {
+    .site-header nav.show {
         display: flex;
     }
 
-    nav a,
-    header nav a {
+    .site-header nav a {
         width: 100%;
 
+        padding: 11px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+
         text-align: center;
-
-        padding: 12px;
-
-        border-top:
-            1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    nav a::after,
-    header nav a::after {
-        display: none;
     }
 
 
@@ -1375,7 +1235,7 @@ header nav a:hover::after {
     .hero {
         min-height: 760px;
 
-        background-position: 65% center;
+        background-position: 68% center;
     }
 
     .hero-content {
@@ -1387,9 +1247,9 @@ header nav a:hover::after {
     .hero-text {
         width: 100%;
 
-        padding: 55px 0 180px;
+        max-width: 620px;
 
-        background: rgba(255, 255, 255, 0.78);
+        padding: 48px 0 190px;
     }
 
     .hero-small-title {
@@ -1398,9 +1258,13 @@ header nav a:hover::after {
 
     .hero h1 {
         font-size: 34px;
+
+        line-height: 1.08;
     }
 
     .hero-text p {
+        max-width: 500px;
+
         font-size: 15px;
     }
 
@@ -1415,7 +1279,7 @@ header nav a:hover::after {
     }
 
 
-    /* HERO FEATURES */
+    /* FEATURE STRIP */
 
     .hero-features {
         grid-template-columns: repeat(2, 1fr);
@@ -1431,14 +1295,11 @@ header nav a:hover::after {
         padding: 12px 8px;
 
         border-right: none;
-
-        border-bottom:
-            1px solid rgba(255, 255, 255, 0.25);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     }
 
-    .hero-feature:nth-child(2n + 1) {
-        border-right:
-            1px solid rgba(255, 255, 255, 0.25);
+    .hero-feature:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     .hero-feature:nth-child(3),
@@ -1486,84 +1347,35 @@ header nav a:hover::after {
     }
 
     .product-content {
-        padding: 22px;
-    }
-
-    .product-content h3 {
-        font-size: 20px;
+        padding: 21px;
     }
 
 
     /* BRANDS */
 
     .brands {
-        padding: 40px 20px;
+        padding: 40px 0;
     }
 
-    .brands .section-heading {
-        margin-bottom: 25px;
-    }
-
-    .brands .section-heading h2 {
-        font-size: 27px;
-    }
-
-    .brands .section-heading p {
-        font-size: 13px;
-    }
-
-    .brands .brand-grid {
+    .brand-grid {
         grid-template-columns: repeat(2, 1fr);
 
         gap: 10px;
     }
 
-    .brands .brand-card {
+    .brand-card {
         height: 90px;
 
         padding: 10px;
     }
 
-    .brands .brand-card img {
+    .brand-card img {
         width: 120px;
         height: 52px;
     }
 
-    .brands .brand-card img[alt="HCH"] {
-        width: 95px;
-        height: 42px;
-    }
 
-    .brands .brand-card img[alt="STL"] {
-        width: 100px;
-        height: 45px;
-    }
-
-    .brands .brand-card img[alt="Orlin"] {
-        width: 105px;
-        height: 45px;
-    }
-
-    .brands .brand-card img[alt="Diamond"],
-    .brands .brand-card img[alt="Castrol"] {
-        width: 110px;
-        height: 45px;
-    }
-
-    .brands .brand-card img[alt="HP Lubricants"],
-    .brands .brand-card img[alt="Texspin"] {
-        width: 110px;
-        height: 46px;
-    }
-
-    .brands .brand-card img[alt="JK Pioneer"],
-    .brands .brand-card img[alt="Kay Vee"] {
-        width: 115px;
-        height: 47px;
-    }
-
-
-    /* WHY US */
+    /* WHY */
 
     .why-us {
         padding: 50px 0;
@@ -1573,29 +1385,12 @@ header nav a:hover::after {
         grid-template-columns: 1fr;
 
         gap: 14px;
-
-        margin-top: 28px;
     }
 
     .why-card {
+        min-height: auto;
+
         padding: 22px 20px;
-    }
-
-    .why-card > div {
-        width: 44px;
-        height: 44px;
-
-        font-size: 18px;
-
-        margin-bottom: 14px;
-    }
-
-    .why-card h3 {
-        font-size: 17px;
-    }
-
-    .why-card p {
-        font-size: 13px;
     }
 
 
@@ -1640,10 +1435,6 @@ header nav a:hover::after {
         min-height: 350px;
     }
 
-    .map iframe {
-        min-height: 350px;
-    }
-
 
     /* FOOTER */
 
@@ -1654,86 +1445,38 @@ header nav a:hover::after {
     }
 
     .footer-logo {
-        width: 150px;
+        width: 160px;
     }
 }
 
 
-/* =====================================================
+/* =========================================================
    SMALL PHONES
-   ===================================================== */
+   ========================================================= */
 
 @media (max-width: 480px) {
 
-    .logo-text strong {
-        font-size: 16px;
-    }
-
-    .logo-text span {
-        font-size: 9px;
-    }
-
-
-    /* HERO */
-
     .hero {
-        min-height: 730px;
+        min-height: 750px;
+
+        background-position: 70% center;
     }
 
     .hero-content {
-        min-height: 730px;
+        min-height: 750px;
     }
 
     .hero-text {
-        padding-top: 40px;
+        padding-top: 38px;
     }
 
     .hero h1 {
         font-size: 29px;
     }
 
-
-    /* BRANDS */
-
-    .brands {
-        padding: 35px 15px;
+    .hero-text p {
+        font-size: 14px;
     }
-
-    .brands .section-heading {
-        margin-bottom: 22px;
-    }
-
-    .brands .section-heading > span {
-        font-size: 10px;
-    }
-
-    .brands .section-heading h2 {
-        font-size: 24px;
-    }
-
-    .brands .section-heading p {
-        font-size: 12px;
-    }
-
-    .brands .brand-grid {
-        gap: 8px;
-    }
-
-    .brands .brand-card {
-        height: 85px;
-
-        padding: 8px;
-
-        border-radius: 9px;
-    }
-
-    .brands .brand-card img {
-        width: 105px;
-        height: 48px;
-    }
-
-
-    /* HERO FEATURES */
 
     .hero-feature {
         gap: 7px;
@@ -1748,411 +1491,41 @@ header nav a:hover::after {
     }
 
 
-    /* FLOATING WHATSAPP */
+    .brands {
+        padding: 35px 0;
+    }
 
-    .floating-whatsapp {
-        width: 52px;
-        height: 52px;
-
-        right: 16px;
-        bottom: 16px;
-
+    .brands .section-heading h2 {
         font-size: 24px;
     }
-}
-/* =====================================================
-   HERO - FINAL CLEAN FIX
-   ===================================================== */
 
-.hero {
-    position: relative;
-    min-height: 650px;
-    background-image: url("images/hero.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-
-/* Hero content */
-.hero-content {
-    position: relative;
-    z-index: 2;
-
-    width: 90%;
-    max-width: 1200px;
-    min-height: 650px;
-
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-}
-
-/* Left text area */
-.hero-text {
-    width: 52%;
-    max-width: 590px;
-
-    padding: 60px 0 150px;
-
-    position: relative;
-    z-index: 3;
-}
-
-/* Small heading */
-.hero-small-title {
-    font-size: 17px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 14px;
-
-    color: #17233c;
-}
-
-/* Main heading */
-.hero h1 {
-    font-size: 46px;
-    line-height: 1.05;
-
-    margin: 0 0 22px;
-
-    color: #17233c;
-    font-weight: 800;
-}
-
-/* Orange heading */
-.hero h1 span {
-    display: block;
-    color: #ed3b16;
-}
-
-/* Description */
-.hero-text p {
-    max-width: 570px;
-
-    font-size: 16px;
-    line-height: 1.65;
-
-    margin-bottom: 28px;
-
-    color: #596579;
-}
-
-/* Buttons */
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-
-    position: relative;
-    z-index: 5;
-}
-
-.hero .btn {
-    min-width: 165px;
-
-    padding: 14px 23px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 6px;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    text-decoration: none;
-
-    transition: all 0.25s ease;
-}
-
-/* Call button */
-.hero .btn-call {
-    background: #102d63 !important;
-    color: #ffffff !important;
-}
-
-.hero .btn-call:hover {
-    background: #071a3c !important;
-    transform: translateY(-2px);
-}
-
-/* WhatsApp button */
-.hero .btn-whatsapp {
-    background: #f05a16 !important;
-    color: #ffffff !important;
-}
-
-.hero .btn-whatsapp:hover {
-    background: #d94308 !important;
-    transform: translateY(-2px);
-}
-
-
-/* =====================================================
-   HERO FEATURE STRIP
-   ===================================================== */
-
-.hero-features {
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    width: 100%;
-
-    min-height: 100px;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    background: rgba(7, 37, 82, 0.96);
-
-    color: #ffffff;
-
-    padding: 16px 5%;
-
-    z-index: 10;
-}
-
-.hero-feature {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 13px;
-
-    padding: 8px 18px;
-
-    border-right: 1px solid rgba(255,255,255,0.25);
-}
-
-.hero-feature:last-child {
-    border-right: none;
-}
-
-.feature-icon {
-    width: 44px;
-    height: 44px;
-
-    flex-shrink: 0;
-
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 20px;
-}
-
-.hero-feature strong {
-    display: block;
-
-    font-size: 14px;
-    color: #ffffff;
-}
-
-.hero-feature small {
-    display: block;
-
-    margin-top: 2px;
-
-    font-size: 11px;
-    color: #dce5f5;
-}
-
-
-/* =====================================================
-   HERO TABLET
-   ===================================================== */
-
-@media (max-width: 1000px) {
-
-    .hero {
-        min-height: 620px;
-        background-position: center center;
+    .brands .section-heading p {
+        font-size: 12px;
     }
 
-    .hero-content {
-        min-height: 620px;
+    .brand-grid {
+        gap: 8px;
     }
 
-    .hero-text {
-        width: 55%;
-        max-width: 560px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero-text p {
-        font-size: 15px;
-    }
-}
-
-
-/* =====================================================
-   HERO MOBILE
-   ===================================================== */
-
-@media (max-width: 768px) {
-
-    .hero {
-        min-height: 760px;
-
-        /*
-         * Put the machine slightly to the right
-         * so the text remains readable.
-         */
-        background-position: 68% center;
-    }
-
-    .hero-content {
-        min-height: 760px;
-
-        width: 92%;
-
-        align-items: flex-start;
-    }
-
-    .hero-text {
-        width: 100%;
-        max-width: 100%;
-
-        padding: 45px 0 190px;
-
-        /*
-         * Slight transparent background only on mobile.
-         */
-        background: rgba(255,255,255,0.86);
-    }
-
-    .hero-small-title {
-        font-size: 14px;
-        letter-spacing: 1px;
-        margin-bottom: 12px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-        line-height: 1.08;
-        margin-bottom: 20px;
-    }
-
-    .hero-text p {
-        font-size: 14px;
-        line-height: 1.6;
-
-        max-width: 100%;
-
-        margin-bottom: 24px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: flex-start;
-
-        gap: 10px;
-    }
-
-    .hero .btn {
-        min-width: 180px;
-        padding: 13px 20px;
-    }
-
-    /* Feature strip */
-    .hero-features {
-        grid-template-columns: repeat(2, 1fr);
-
-        min-height: auto;
+    .brand-card {
+        height: 85px;
 
         padding: 8px;
+
+        border-radius: 9px;
     }
 
-    .hero-feature {
-        justify-content: flex-start;
-
-        padding: 11px 8px;
-
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
+    .brand-card img {
+        width: 105px;
+        height: 48px;
     }
 
-    .hero-feature:nth-child(odd) {
-        border-right: 1px solid rgba(255,255,255,0.2);
-    }
 
-    .hero-feature:nth-child(3),
-    .hero-feature:nth-child(4) {
-        border-bottom: none;
-    }
-
-    .feature-icon {
-        width: 36px;
-        height: 36px;
-
+    .why-card h3 {
         font-size: 17px;
     }
 
-    .hero-feature strong {
-        font-size: 10px;
-    }
-
-    .hero-feature small {
-        font-size: 8px;
-    }
-}
-
-
-/* =====================================================
-   SMALL PHONES
-   ===================================================== */
-
-@media (max-width: 480px) {
-
-    .hero {
-        min-height: 730px;
-        background-position: 70% center;
-    }
-
-    .hero-content {
-        min-height: 730px;
-    }
-
-    .hero-text {
-        padding-top: 38px;
-        padding-bottom: 175px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero-text p {
+    .why-card p {
         font-size: 13px;
-    }
-
-    .hero .btn {
-        min-width: 175px;
-        font-size: 14px;
-    }
-
-    .hero-feature {
-        gap: 6px;
-        padding: 9px 6px;
-    }
-
-    .hero-feature strong {
-        font-size: 9px;
-    }
-
-    .hero-feature small {
-        font-size: 7.5px;
     }
 }
