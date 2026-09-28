@@ -1884,3 +1884,131 @@ header nav a:hover::after {
         font-size: 11px;
     }
 }
+/* =====================================================
+   HERO - FINAL OVERRIDE
+   ===================================================== */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    background-image: url("images/hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Remove any old white/dark overlay */
+.hero::before,
+.hero::after {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* Keep hero content fully visible */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    opacity: 1 !important;
+}
+
+.hero-text {
+    width: 52%;
+    padding: 70px 0 140px;
+    opacity: 1 !important;
+}
+
+/* Small heading */
+.hero-small-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: #17233c;
+    opacity: 1 !important;
+}
+
+/* Main heading */
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+    color: #17233c;
+    font-weight: 800;
+    opacity: 1 !important;
+}
+
+.hero h1 span {
+    display: block;
+    color: #ed3b16;
+    opacity: 1 !important;
+}
+
+/* Description */
+.hero-text p {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 620px;
+    color: #26344d;
+    margin-bottom: 30px;
+    opacity: 1 !important;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 3;
+}
+
+.hero .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 170px;
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    opacity: 1 !important;
+}
+
+.hero .btn-call {
+    background: #102d63 !important;
+    color: #ffffff !important;
+}
+
+.hero .btn-call:hover {
+    background: #071a3c !important;
+    transform: translateY(-2px);
+}
+
+.hero .btn-whatsapp {
+    background: #f05a16 !important;
+    color: #ffffff !important;
+}
+
+.hero .btn-whatsapp:hover {
+    background: #d94308 !important;
+    transform: translateY(-2px);
+}
+
+/* Feature strip */
+.hero-features {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    opacity: 1 !important;
+}
