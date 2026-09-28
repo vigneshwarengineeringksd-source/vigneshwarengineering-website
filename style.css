@@ -1143,78 +1143,69 @@ product-card {
 }
 
 
-/* Default Logo Size */
+/* =========================================
+   BRAND LOGO NORMALIZATION
+   ========================================= */
+
+.brands .brand-card {
+    position: relative;
+    overflow: hidden;
+}
+
 .brands .brand-card img {
     display: block;
-
-    width: auto;
-    height: auto;
-
-    max-width: 145px;
-    max-height: 65px;
-
+    width: 140px;
+    height: 58px;
     object-fit: contain;
-
+    object-position: center;
     transition: transform 0.3s ease;
 }
 
-
-/* Hover */
-.brands .brand-card:hover {
-    transform: translateY(-5px);
-
-    border-color: #102d63;
-
-    box-shadow:
-        0 12px 25px rgba(16, 45, 99, 0.14);
-}
-
-.brands .brand-card:hover img {
-    transform: scale(1.05);
-}
-
-
-/* =========================================
-   LOGO SIZE NORMALIZATION
-   ========================================= */
-
-/* HCH */
+/* Smaller / visually lighter logos */
 .brands .brand-card img[alt="HCH"] {
-    max-width: 90px;
-    max-height: 35px;
+    width: 105px;
+    height: 45px;
 }
 
-/* Diamond */
-.brands .brand-card img[alt="Diamond"] {
-    max-width: 105px;
-    max-height: 38px;
+.brands .brand-card img[alt="STL"] {
+    width: 110px;
+    height: 48px;
 }
 
-/* Castrol */
-.brands .brand-card img[alt="Castrol"] {
-    max-width: 105px;
-    max-height: 38px;
-}
-
-/* HP Lubricants */
-.brands .brand-card img[alt="HP Lubricants"] {
-    max-width: 105px;
-    max-height: 42px;
-}
-
-/* Texspin */
-.brands .brand-card img[alt="Texspin"] {
-    max-width: 105px;
-    max-height: 42px;
-}
-
-/* Orlin */
 .brands .brand-card img[alt="Orlin"] {
-    max-width: 115px;
-    max-height: 42px;
+    width: 115px;
+    height: 48px;
 }
 
+.brands .brand-card img[alt="Diamond"] {
+    width: 120px;
+    height: 48px;
+}
 
+.brands .brand-card img[alt="Castrol"] {
+    width: 120px;
+    height: 48px;
+}
+
+.brands .brand-card img[alt="HP Lubricants"] {
+    width: 120px;
+    height: 50px;
+}
+
+.brands .brand-card img[alt="Texspin"] {
+    width: 120px;
+    height: 50px;
+}
+
+.brands .brand-card img[alt="JK Pioneer"] {
+    width: 125px;
+    height: 50px;
+}
+
+.brands .brand-card img[alt="Kay Vee"] {
+    width: 125px;
+    height: 50px;
+}
 /* =========================================
    TABLET
    ========================================= */
