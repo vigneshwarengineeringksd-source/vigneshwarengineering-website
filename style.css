@@ -1340,19 +1340,21 @@ product-card {
     }
 
 }
-/* ================= BRANDS ================= */
+/* =========================================
+   FINAL BRANDS SECTION
+   ========================================= */
 
 .brands {
-    padding: 45px 0 25px;
+    padding: 45px 25px;
     background: #f8f9fb;
+    overflow: hidden;
 }
 
-/* Heading */
-
+/* Section Heading */
 .brands .section-heading {
     text-align: center;
     max-width: 650px;
-    margin: 0 auto 25px;
+    margin: 0 auto 30px;
 }
 
 .brands .section-heading span {
@@ -1382,92 +1384,182 @@ product-card {
 
 
 /* Brand Grid */
-
-.brand-grid {
+.brands .brand-grid {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
+    gap: 16px;
 }
 
 
 /* Brand Card */
-
-.brand-card {
-    height: 78px;
+.brands .brand-card {
+    height: 105px;
+    padding: 15px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 14px;
-
     background: #ffffff;
-    border: 1px solid #e7e9ee;
-    border-radius: 10px;
+    border: 1px solid #dfe4eb;
+    border-radius: 12px;
 
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
 
     transition:
-        transform 0.22s ease,
-        box-shadow 0.22s ease,
-        border-color 0.22s ease;
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
-/* Logos */
-
-.brand-card img {
+/* Default Logo Size */
+.brands .brand-card img {
     display: block;
 
     width: auto;
     height: auto;
 
-    max-width: 155px;
-    max-height: 45px;
+    max-width: 145px;
+    max-height: 65px;
 
     object-fit: contain;
 
-    transition: transform 0.22s ease;
+    transition: transform 0.3s ease;
 }
 
 
 /* Hover */
+.brands .brand-card:hover {
+    transform: translateY(-5px);
 
-.brand-card:hover {
-    transform: translateY(-3px);
-
-    border-color: #d4a017;
+    border-color: #102d63;
 
     box-shadow:
-        0 8px 20px rgba(15, 23, 42, 0.09);
+        0 12px 25px rgba(16, 45, 99, 0.14);
 }
 
-.brand-card:hover img {
+.brands .brand-card:hover img {
     transform: scale(1.05);
 }
 
 
-/* ================= TABLET ================= */
+/* =========================================
+   LOGO SIZE NORMALIZATION
+   ========================================= */
 
-@media (max-width: 900px) {
+/* HCH */
+.brands .brand-card img[alt="HCH"] {
+    max-width: 90px;
+    max-height: 35px;
+}
 
-    .brand-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+/* Diamond */
+.brands .brand-card img[alt="Diamond"] {
+    max-width: 105px;
+    max-height: 38px;
+}
 
+/* Castrol */
+.brands .brand-card img[alt="Castrol"] {
+    max-width: 105px;
+    max-height: 38px;
+}
+
+/* HP Lubricants */
+.brands .brand-card img[alt="HP Lubricants"] {
+    max-width: 105px;
+    max-height: 42px;
+}
+
+/* Texspin */
+.brands .brand-card img[alt="Texspin"] {
+    max-width: 105px;
+    max-height: 42px;
+}
+
+/* Orlin */
+.brands .brand-card img[alt="Orlin"] {
+    max-width: 115px;
+    max-height: 42px;
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================================
+   TABLET
+   ========================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 1000px) {
+
+    .brands .brand-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 760px) {
 
     .brands {
-        padding: 45px 0 50px;
+        padding: 45px 20px;
+    }
+
+    .brands .brand-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .brands .brand-card {
+        height: 95px;
+        padding: 12px;
+    }
+
+    .brands .brand-card img {
+        max-width: 125px;
+        max-height: 55px;
+    }
+
+    /* Keep special logos balanced on mobile */
+    .brands .brand-card img[alt="HCH"] {
+        max-width: 85px;
+        max-height: 32px;
+    }
+
+    .brands .brand-card img[alt="Diamond"],
+    .brands .brand-card img[alt="Castrol"] {
+        max-width: 100px;
+        max-height: 36px;
+    }
+
+    .brands .brand-card img[alt="HP Lubricants"],
+    .brands .brand-card img[alt="Texspin"] {
+        max-width: 100px;
+        max-height: 40px;
+    }
+
+    .brands .brand-card img[alt="Orlin"] {
+        max-width: 105px;
+        max-height: 40px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .brands {
+        padding: 35px 15px;
     }
 
     .brands .section-heading {
@@ -1482,57 +1574,18 @@ product-card {
         font-size: 13px;
     }
 
-    .brand-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .brands .brand-grid {
         gap: 10px;
     }
 
-    .brand-card {
-        height: 82px;
+    .brands .brand-card {
+        height: 90px;
         padding: 10px;
-        border-radius: 9px;
+        border-radius: 10px;
     }
 
-    .brand-card img {
+    .brands .brand-card img {
         max-width: 105px;
-        max-height: 45px;
+        max-height: 48px;
     }
-
-}
-/* ================= BRAND LOGO NORMALIZATION ================= */
-
-/* HCH */
-.brand-card img[alt="HCH"] {
-    max-width: 90px;
-    max-height: 35px;
-}
-
-/* Diamond */
-.brand-card img[alt="Diamond"] {
-    max-width: 105px;
-    max-height: 38px;
-}
-
-/* Castrol */
-.brand-card img[alt="Castrol"] {
-    max-width: 105px;
-    max-height: 38px;
-}
-
-/* HP Lubricants */
-.brand-card img[alt="HP Lubricants"] {
-    max-width: 105px;
-    max-height: 42px;
-}
-
-/* Texspin */
-.brand-card img[alt="Texspin"] {
-    max-width: 105px;
-    max-height: 42px;
-}
-
-/* Orlin */
-.brand-card img[alt="Orlin"] {
-    max-width: 115px;
-    max-height: 42px;
 }
