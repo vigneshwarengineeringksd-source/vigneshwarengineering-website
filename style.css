@@ -1378,3 +1378,32 @@ product-card {
         height: 48px;
     }
 }
+/* =========================================
+   FINAL VISUAL LOGO BALANCING
+   ========================================= */
+
+/* HCH */
+.brands .brand-card img[alt="HCH"] {
+    transform: scale(1.35);
+}
+
+/* STL */
+.brands .brand-card img[alt="STL"] {
+    transform: scale(1.15);
+}
+
+/* Texspin */
+.brands .brand-card img[alt="Texspin"] {
+    transform: scale(1.30);
+}
+
+/* Castrol */
+.brands .brand-card img[alt="Castrol"] {
+    transform: scale(1.25);
+}
+
+
+/* Keep hover effect */
+.brands .brand-card:hover img {
+    transform: scale(1.08);
+}
