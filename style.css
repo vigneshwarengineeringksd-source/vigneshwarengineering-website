@@ -1499,3 +1499,40 @@ product-card {
     }
 
 }
+/* ================= BRAND LOGO NORMALIZATION ================= */
+
+/* HCH */
+.brand-card img[alt="HCH"] {
+    max-width: 90px;
+    max-height: 35px;
+}
+
+/* Diamond */
+.brand-card img[alt="Diamond"] {
+    max-width: 105px;
+    max-height: 38px;
+}
+
+/* Castrol */
+.brand-card img[alt="Castrol"] {
+    max-width: 105px;
+    max-height: 38px;
+}
+
+/* HP Lubricants */
+.brand-card img[alt="HP Lubricants"] {
+    max-width: 105px;
+    max-height: 42px;
+}
+
+/* Texspin */
+.brand-card img[alt="Texspin"] {
+    max-width: 105px;
+    max-height: 42px;
+}
+
+/* Orlin */
+.brand-card img[alt="Orlin"] {
+    max-width: 115px;
+    max-height: 42px;
+}
