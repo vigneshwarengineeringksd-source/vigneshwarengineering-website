@@ -1117,13 +1117,13 @@ product-card {
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
+    gap: 12px;
 }
 
 
 /* Brand Card */
 .brands .brand-card {
-    height: 105px;
+    height: 95px;
     padding: 15px;
 
     display: flex;
