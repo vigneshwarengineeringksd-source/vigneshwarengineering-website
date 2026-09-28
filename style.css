@@ -134,15 +134,18 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
     min-height: 650px;
+
     display: flex;
     align-items: center;
 }
 
 .hero-text {
     width: 52%;
-    padding: 70px 0 140px;
-}
+    max-width: 620px;
 
+    /* Move content slightly down */
+    padding: 95px 0 160px;
+}
 .hero-small-title {
     font-size: 18px;
     font-weight: 700;
