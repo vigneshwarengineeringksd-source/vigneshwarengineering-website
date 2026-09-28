@@ -1,6 +1,11 @@
 /* =========================================================
    VIGNESHWAR ENGINEERING INDUSTRIAL
-   CLEAN MASTER STYLESHEET
+   COMPLETE CLEAN WEBSITE STYLESHEET
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
    ========================================================= */
 
 * {
@@ -21,8 +26,8 @@ body {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
 img {
@@ -42,24 +47,23 @@ img {
    ========================================================= */
 
 .site-header {
-    height: 78px;
-    background: #102d63;
-    color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.16);
+
+    background: #102d63;
+    color: #ffffff;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
 .nav-container {
-    width: 90%;
-    max-width: 1120px;
-    height: 100%;
-    margin: 0 auto;
+    min-height: 74px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 }
 
@@ -70,55 +74,68 @@ img {
     display: flex;
     align-items: center;
     gap: 12px;
+
     flex-shrink: 0;
 }
 
 .logo img {
-    width: 58px;
-    height: 58px;
+    width: 52px;
+    height: 52px;
     object-fit: contain;
 }
 
 .logo-text {
     display: flex;
     flex-direction: column;
+
     line-height: 1.1;
 }
 
 .logo-text strong {
-    font-size: 22px;
+    color: #ffffff;
+
+    font-size: 21px;
     font-weight: 800;
+
     letter-spacing: 1px;
 }
 
 .logo-text span {
-    margin-top: 5px;
-    color: #dce5f5;
+    margin-top: 4px;
+
+    color: #dce6f7;
+
     font-size: 11px;
     font-weight: 600;
+
     letter-spacing: 1.5px;
 }
 
 
 /* NAVIGATION */
 
-.site-header nav {
+nav {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-.site-header nav a {
+nav a {
     position: relative;
+
     color: #ffffff;
+
     font-size: 14px;
     font-weight: 600;
+
     padding: 8px 0;
+
     transition: color 0.25s ease;
 }
 
-.site-header nav a::after {
+nav a::after {
     content: "";
+
     position: absolute;
     left: 0;
     bottom: 0;
@@ -131,11 +148,11 @@ img {
     transition: width 0.25s ease;
 }
 
-.site-header nav a:hover {
-    color: #dce7fa;
+nav a:hover {
+    color: #ffffff;
 }
 
-.site-header nav a:hover::after {
+nav a:hover::after {
     width: 100%;
 }
 
@@ -145,10 +162,11 @@ img {
 .menu-toggle {
     display: none;
 
-    border: 0;
+    border: none;
     background: transparent;
 
     color: #ffffff;
+
     font-size: 30px;
 
     cursor: pointer;
@@ -160,38 +178,76 @@ img {
    ========================================================= */
 
 .hero {
-    min-height: 650px;
-
     position: relative;
+
+    min-height: 650px;
 
     background-image: url("images/hero.png");
     background-size: cover;
-    background-position: center right;
+    background-position: center center;
     background-repeat: no-repeat;
 
     overflow: hidden;
 }
 
+
+/*
+   VERY LIGHT LEFT-SIDE GRADIENT
+
+   This improves text readability without putting
+   a heavy white overlay over the machine image.
+*/
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.92) 0%,
+            rgba(255, 255, 255, 0.82) 34%,
+            rgba(255, 255, 255, 0.35) 57%,
+            rgba(255, 255, 255, 0) 74%
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* HERO CONTENT */
+
 .hero-content {
+    position: relative;
+    z-index: 2;
+
     width: 90%;
     max-width: 1120px;
+
     min-height: 650px;
 
     margin: 0 auto;
 
     display: flex;
     align-items: center;
-
-    position: relative;
-    z-index: 2;
 }
+
+
+/* HERO TEXT */
 
 .hero-text {
-    width: 53%;
-    max-width: 610px;
+    width: 55%;
+    max-width: 650px;
 
-    padding: 55px 0 135px;
+    padding: 60px 0 145px;
 }
+
+
+/* SMALL TITLE */
 
 .hero-small-title {
     margin-bottom: 14px;
@@ -199,35 +255,45 @@ img {
     color: #17233c;
 
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 800;
+
     letter-spacing: 1.5px;
 }
 
-.hero h1 {
-    margin-bottom: 24px;
 
-    color: #17233c;
+/* MAIN HEADING */
+
+.hero h1 {
+    margin-bottom: 22px;
+
+    color: #102d63;
 
     font-size: 48px;
-    font-weight: 800;
-    line-height: 1.04;
+    line-height: 1.05;
+    font-weight: 900;
+
     letter-spacing: -0.5px;
 }
 
 .hero h1 span {
     display: block;
+
     color: #ed3b16;
 }
 
+
+/* DESCRIPTION */
+
 .hero-text p {
-    max-width: 600px;
+    max-width: 610px;
 
     margin-bottom: 28px;
 
-    color: #4d5a6e;
+    color: #39465c;
 
     font-size: 16px;
     line-height: 1.7;
+    font-weight: 500;
 }
 
 
@@ -235,8 +301,11 @@ img {
 
 .hero-buttons {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+
     gap: 14px;
+
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -248,7 +317,7 @@ img {
 
     padding: 14px 23px;
 
-    border-radius: 7px;
+    border-radius: 6px;
 
     font-size: 15px;
     font-weight: 700;
@@ -259,26 +328,40 @@ img {
         box-shadow 0.25s ease;
 }
 
+
+/* CALL BUTTON */
+
 .btn-call {
     background: #102d63;
     color: #ffffff;
+
+    box-shadow: 0 5px 15px rgba(16, 45, 99, 0.20);
 }
 
 .btn-call:hover {
     background: #071a3c;
+
     transform: translateY(-2px);
-    box-shadow: 0 7px 18px rgba(16, 45, 99, 0.22);
+
+    box-shadow: 0 8px 20px rgba(16, 45, 99, 0.25);
 }
 
+
+/* WHATSAPP BUTTON */
+
 .btn-whatsapp {
-    background: #f05a16;
+    background: #ed3b16;
     color: #ffffff;
+
+    box-shadow: 0 5px 15px rgba(237, 59, 22, 0.18);
 }
 
 .btn-whatsapp:hover {
     background: #d94308;
+
     transform: translateY(-2px);
-    box-shadow: 0 7px 18px rgba(240, 90, 22, 0.22);
+
+    box-shadow: 0 8px 20px rgba(237, 59, 22, 0.25);
 }
 
 
@@ -288,22 +371,23 @@ img {
 
 .hero-features {
     position: absolute;
+
     left: 0;
     right: 0;
     bottom: 0;
+
+    z-index: 5;
 
     min-height: 100px;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    padding: 15px 5%;
+    padding: 16px 5%;
 
     background: rgba(7, 37, 82, 0.96);
 
     color: #ffffff;
-
-    z-index: 5;
 }
 
 .hero-feature {
@@ -313,7 +397,7 @@ img {
 
     gap: 13px;
 
-    padding: 10px 18px;
+    padding: 8px 20px;
 
     border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
@@ -321,6 +405,9 @@ img {
 .hero-feature:last-child {
     border-right: none;
 }
+
+
+/* FEATURE ICON */
 
 .feature-icon {
     width: 45px;
@@ -346,6 +433,7 @@ img {
     color: #ffffff;
 
     font-size: 14px;
+    font-weight: 700;
 }
 
 .hero-feature small {
@@ -380,7 +468,9 @@ img {
 
     font-size: 13px;
     font-weight: 800;
+
     letter-spacing: 1.5px;
+
     text-transform: uppercase;
 }
 
@@ -389,7 +479,7 @@ img {
 
     color: #17233c;
 
-    font-size: 37px;
+    font-size: 36px;
     line-height: 1.2;
 }
 
@@ -397,6 +487,8 @@ img {
     max-width: 700px;
 
     color: #596579;
+
+    font-size: 15px;
 }
 
 
@@ -431,13 +523,18 @@ img {
 
 .product-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 26px;
+
     align-items: stretch;
 }
 
 
-/* IMPORTANT: .product-card */
+/* IMPORTANT:
+   This must be .product-card, not product-card
+*/
 
 .product-card {
     display: flex;
@@ -447,7 +544,7 @@ img {
 
     background: #ffffff;
 
-    border: 1px solid #d8dee8;
+    border: 1px solid #d9dee7;
     border-radius: 12px;
 
     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
@@ -471,7 +568,7 @@ img {
 
 .product-image {
     width: 100%;
-    height: 255px;
+    height: 250px;
 
     display: flex;
     align-items: center;
@@ -504,7 +601,7 @@ img {
     display: flex;
     flex-direction: column;
 
-    padding: 23px;
+    padding: 23px 23px 25px;
 }
 
 .product-category {
@@ -516,7 +613,9 @@ img {
 
     font-size: 11px;
     font-weight: 800;
+
     letter-spacing: 1.3px;
+
     text-transform: uppercase;
 }
 
@@ -530,7 +629,7 @@ img {
 }
 
 .product-content p {
-    margin-bottom: 17px;
+    margin-bottom: 18px;
 
     color: #667085;
 
@@ -539,6 +638,8 @@ img {
 }
 
 .product-link {
+    display: inline-block;
+
     margin-top: auto;
 
     color: #102d63;
@@ -551,11 +652,19 @@ img {
 
 .product-link:hover {
     color: #ed3b16;
+
     transform: translateX(4px);
 }
 
 
-/* PRODUCT NOTE */
+/* FEATURED PRODUCT */
+
+.product-card-featured {
+    border-color: #d9dee7;
+}
+
+
+/* PRODUCTS NOTE */
 
 .products-note {
     margin-top: 42px;
@@ -570,7 +679,7 @@ img {
 
     text-align: center;
 
-    box-shadow: 0 8px 25px rgba(16, 45, 99, 0.15);
+    box-shadow: 0 8px 25px rgba(16, 45, 99, 0.14);
 }
 
 .products-note strong {
@@ -582,7 +691,7 @@ img {
 }
 
 .products-note p {
-    margin-bottom: 19px;
+    margin-bottom: 18px;
 
     color: #dce5f5;
 }
@@ -605,6 +714,7 @@ img {
 
 .catalogue-button:hover {
     background: #d94308;
+
     transform: translateY(-2px);
 }
 
@@ -614,7 +724,7 @@ img {
    ========================================================= */
 
 .brands {
-    padding: 48px 0;
+    padding: 55px 25px;
 
     background: #f8f9fb;
 
@@ -624,18 +734,24 @@ img {
 .brands .section-heading {
     max-width: 650px;
 
-    margin: 0 auto 28px;
+    margin: 0 auto 30px;
 
     text-align: center;
 }
 
-.brands .section-heading > span {
+.brands .section-heading span {
+    display: block;
+
     margin-bottom: 7px;
 
     color: #b8860b;
 
     font-size: 11px;
+    font-weight: 700;
+
     letter-spacing: 2px;
+
+    text-transform: uppercase;
 }
 
 .brands .section-heading h2 {
@@ -644,6 +760,8 @@ img {
     color: #182238;
 
     font-size: 30px;
+    line-height: 1.2;
+    font-weight: 800;
 }
 
 .brands .section-heading p {
@@ -652,31 +770,38 @@ img {
     color: #6b7280;
 
     font-size: 14px;
+    line-height: 1.6;
 }
 
 
 /* BRAND GRID */
 
-.brand-grid {
+.brands .brand-grid {
     width: 100%;
     max-width: 1000px;
 
     margin: 0 auto;
 
     display: grid;
+
     grid-template-columns: repeat(5, 1fr);
 
     gap: 12px;
 }
 
-.brand-card {
+
+/* BRAND CARD */
+
+.brands .brand-card {
+    position: relative;
+
     height: 95px;
+
+    padding: 12px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 12px;
 
     background: #ffffff;
 
@@ -693,9 +818,14 @@ img {
         box-shadow 0.3s ease;
 }
 
-.brand-card img {
+
+/* BRAND LOGOS */
+
+.brands .brand-card img {
     width: 140px;
     height: 58px;
+
+    display: block;
 
     object-fit: contain;
     object-position: center;
@@ -703,7 +833,77 @@ img {
     transition: transform 0.3s ease;
 }
 
-.brand-card:hover {
+
+/* INDIVIDUAL LOGO SIZES */
+
+.brands .brand-card img[alt="HCH"] {
+    width: 105px;
+    height: 45px;
+}
+
+.brands .brand-card img[alt="STL"] {
+    width: 110px;
+    height: 48px;
+}
+
+.brands .brand-card img[alt="Orlin"] {
+    width: 115px;
+    height: 48px;
+}
+
+.brands .brand-card img[alt="Diamond"] {
+    width: 120px;
+    height: 48px;
+}
+
+.brands .brand-card img[alt="Castrol"] {
+    width: 120px;
+    height: 48px;
+}
+
+.brands .brand-card img[alt="HP Lubricants"] {
+    width: 120px;
+    height: 50px;
+}
+
+.brands .brand-card img[alt="Texspin"] {
+    width: 120px;
+    height: 50px;
+}
+
+.brands .brand-card img[alt="JK Pioneer"] {
+    width: 125px;
+    height: 50px;
+}
+
+.brands .brand-card img[alt="Kay Vee"] {
+    width: 125px;
+    height: 50px;
+}
+
+
+/* VISUAL BALANCING */
+
+.brands .brand-card img[alt="HCH"] {
+    transform: scale(1.30);
+}
+
+.brands .brand-card img[alt="STL"] {
+    transform: scale(1.12);
+}
+
+.brands .brand-card img[alt="Texspin"] {
+    transform: scale(1.25);
+}
+
+.brands .brand-card img[alt="Castrol"] {
+    transform: scale(1.20);
+}
+
+
+/* BRAND HOVER */
+
+.brands .brand-card:hover {
     transform: translateY(-4px);
 
     border-color: #102d63;
@@ -711,56 +911,8 @@ img {
     box-shadow: 0 10px 22px rgba(16, 45, 99, 0.12);
 }
 
-.brand-card:hover img {
-    transform: scale(1.06);
-}
-
-
-/* INDIVIDUAL LOGO SIZES */
-
-.brand-card img[alt="HCH"] {
-    width: 105px;
-    height: 45px;
-}
-
-.brand-card img[alt="STL"] {
-    width: 110px;
-    height: 48px;
-}
-
-.brand-card img[alt="Orlin"] {
-    width: 115px;
-    height: 48px;
-}
-
-.brand-card img[alt="Diamond"] {
-    width: 120px;
-    height: 48px;
-}
-
-.brand-card img[alt="Castrol"] {
-    width: 120px;
-    height: 48px;
-}
-
-.brand-card img[alt="HP Lubricants"] {
-    width: 120px;
-    height: 50px;
-}
-
-.brand-card img[alt="Texspin"] {
-    width: 120px;
-    height: 50px;
-}
-
-.brand-card img[alt="JK Pioneer"] {
-    width: 125px;
-    height: 50px;
-}
-
-.brand-card img[alt="Kay Vee"] {
-    width: 125px;
-    height: 50px;
+.brands .brand-card:hover img {
+    transform: scale(1.08);
 }
 
 
@@ -769,13 +921,18 @@ img {
    ========================================================= */
 
 .why-us {
-    padding: 70px 0;
-
     background: #f7f9fc;
+
+    padding: 70px 0;
+}
+
+.why-us .container {
+    max-width: 1120px;
 }
 
 .why-grid {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
 
     gap: 18px;
@@ -784,9 +941,9 @@ img {
 }
 
 .why-card {
-    min-height: 190px;
-
     position: relative;
+
+    min-height: 190px;
 
     padding: 26px 22px;
 
@@ -807,6 +964,7 @@ img {
     content: "";
 
     position: absolute;
+
     top: 0;
     left: 0;
 
@@ -859,15 +1017,19 @@ img {
 
     color: #102d63;
 
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: 700;
+
     line-height: 1.35;
 }
 
 .why-card p {
+    margin: 0;
+
     color: #667085;
 
     font-size: 13.5px;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 
@@ -876,11 +1038,15 @@ img {
    ========================================================= */
 
 .enquiry {
-    padding: 38px 0;
-
     background: #102d63;
 
     color: #ffffff;
+
+    padding: 38px 0;
+}
+
+.enquiry .container {
+    max-width: 1120px;
 }
 
 .enquiry-box {
@@ -898,12 +1064,13 @@ img {
 .enquiry-box span {
     display: block;
 
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 
     color: #d8e3f7;
 
     font-size: 11px;
     font-weight: 700;
+
     letter-spacing: 1.4px;
 }
 
@@ -922,8 +1089,12 @@ img {
     font-size: 13px;
 }
 
+
+/* ENQUIRY BUTTONS */
+
 .enquiry-buttons {
     display: flex;
+
     gap: 10px;
 
     flex-shrink: 0;
@@ -937,24 +1108,35 @@ img {
     border-radius: 7px;
 
     font-size: 13px;
+    font-weight: 600;
+
+    text-align: center;
+
+    transition: 0.25s ease;
 }
 
 .enquiry-buttons .btn-call {
     background: #ffffff;
+
     color: #102d63;
 }
 
 .enquiry-buttons .btn-call:hover {
     background: #eef3fa;
+
+    transform: translateY(-2px);
 }
 
 .enquiry-buttons .btn-whatsapp {
-    background: #16c765;
+    background: #25d366;
+
     color: #ffffff;
 }
 
 .enquiry-buttons .btn-whatsapp:hover {
-    background: #10b957;
+    background: #16b957;
+
+    transform: translateY(-2px);
 }
 
 
@@ -968,6 +1150,7 @@ img {
 
 .contact-grid {
     display: grid;
+
     grid-template-columns: 1fr 1.2fr;
 
     gap: 50px;
@@ -1000,11 +1183,16 @@ img {
 
 .contact-item a {
     color: #102d63;
+
+    transition: color 0.2s ease;
 }
 
 .contact-item a:hover {
     color: #ed3b16;
 }
+
+
+/* MAP */
 
 .map {
     min-height: 400px;
@@ -1019,6 +1207,7 @@ img {
 .map iframe {
     width: 100%;
     height: 100%;
+
     min-height: 400px;
 
     border: 0;
@@ -1030,15 +1219,16 @@ img {
    ========================================================= */
 
 .footer {
-    padding-top: 60px;
-
     background: #07152f;
 
     color: #ffffff;
+
+    padding-top: 60px;
 }
 
 .footer-grid {
     display: grid;
+
     grid-template-columns: 1.5fr 1fr 1fr;
 
     gap: 50px;
@@ -1047,7 +1237,9 @@ img {
 }
 
 .footer-logo {
-    width: 220px;
+    width: 210px;
+
+    height: auto;
 
     margin-bottom: 20px;
 }
@@ -1061,6 +1253,8 @@ img {
 .footer h3 {
     margin-bottom: 15px;
 
+    color: #ffffff;
+
     font-size: 19px;
 }
 
@@ -1070,6 +1264,8 @@ img {
     margin-bottom: 8px;
 
     color: #c8d1df;
+
+    transition: color 0.2s ease;
 }
 
 .footer a:hover {
@@ -1081,11 +1277,11 @@ img {
 
     border-top: 1px solid rgba(255, 255, 255, 0.15);
 
-    text-align: center;
-
     color: #aeb8c8;
 
     font-size: 14px;
+
+    text-align: center;
 }
 
 
@@ -1133,11 +1329,7 @@ img {
 @media (max-width: 1000px) {
 
     .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero-text {
-        width: 55%;
+        font-size: 42px;
     }
 
     .product-grid {
@@ -1148,13 +1340,10 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .brand-grid {
+    .brands .brand-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .footer-grid {
-        grid-template-columns: 1.3fr 1fr 1fr;
-    }
 }
 
 
@@ -1171,15 +1360,8 @@ img {
 
     /* HEADER */
 
-    .site-header {
-        height: auto;
-        min-height: 70px;
-    }
-
     .nav-container {
-        width: 92%;
-
-        min-height: 70px;
+        min-height: 68px;
 
         flex-wrap: wrap;
 
@@ -1187,8 +1369,8 @@ img {
     }
 
     .logo img {
-        width: 48px;
-        height: 48px;
+        width: 46px;
+        height: 46px;
     }
 
     .logo-text strong {
@@ -1203,7 +1385,7 @@ img {
         display: block;
     }
 
-    .site-header nav {
+    nav {
         display: none;
 
         width: 100%;
@@ -1213,13 +1395,15 @@ img {
         gap: 0;
 
         padding: 8px 0 12px;
+
+        background: #102d63;
     }
 
-    .site-header nav.show {
+    nav.show {
         display: flex;
     }
 
-    .site-header nav a {
+    nav a {
         width: 100%;
 
         padding: 11px;
@@ -1235,7 +1419,18 @@ img {
     .hero {
         min-height: 760px;
 
-        background-position: 68% center;
+        background-position: 64% center;
+    }
+
+    .hero::before {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.92) 0%,
+                rgba(255, 255, 255, 0.78) 48%,
+                rgba(255, 255, 255, 0.18) 78%,
+                rgba(255, 255, 255, 0) 100%
+            );
     }
 
     .hero-content {
@@ -1254,6 +1449,8 @@ img {
 
     .hero-small-title {
         font-size: 14px;
+
+        letter-spacing: 1px;
     }
 
     .hero h1 {
@@ -1263,19 +1460,19 @@ img {
     }
 
     .hero-text p {
-        max-width: 500px;
+        max-width: 550px;
 
         font-size: 15px;
     }
 
     .hero-buttons {
-        flex-direction: column;
+        flex-direction: row;
 
         align-items: flex-start;
     }
 
     .hero .btn {
-        min-width: 190px;
+        min-width: 165px;
     }
 
 
@@ -1295,6 +1492,7 @@ img {
         padding: 12px 8px;
 
         border-right: none;
+
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     }
 
@@ -1311,7 +1509,7 @@ img {
         width: 38px;
         height: 38px;
 
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .hero-feature strong {
@@ -1350,26 +1548,38 @@ img {
         padding: 21px;
     }
 
+    .product-content h3 {
+        font-size: 20px;
+    }
+
 
     /* BRANDS */
 
     .brands {
-        padding: 40px 0;
+        padding: 42px 20px;
     }
 
-    .brand-grid {
+    .brands .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .brands .section-heading p {
+        font-size: 13px;
+    }
+
+    .brands .brand-grid {
         grid-template-columns: repeat(2, 1fr);
 
         gap: 10px;
     }
 
-    .brand-card {
+    .brands .brand-card {
         height: 90px;
 
         padding: 10px;
     }
 
-    .brand-card img {
+    .brands .brand-card img {
         width: 120px;
         height: 52px;
     }
@@ -1385,6 +1595,8 @@ img {
         grid-template-columns: 1fr;
 
         gap: 14px;
+
+        margin-top: 28px;
     }
 
     .why-card {
@@ -1447,6 +1659,7 @@ img {
     .footer-logo {
         width: 160px;
     }
+
 }
 
 
@@ -1456,14 +1669,25 @@ img {
 
 @media (max-width: 480px) {
 
-    .hero {
-        min-height: 750px;
+    .logo-text strong {
+        font-size: 16px;
+    }
 
-        background-position: 70% center;
+    .logo-text span {
+        font-size: 8px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 730px;
+
+        background-position: 67% center;
     }
 
     .hero-content {
-        min-height: 750px;
+        min-height: 730px;
     }
 
     .hero-text {
@@ -1476,10 +1700,25 @@ img {
 
     .hero-text p {
         font-size: 14px;
+
+        line-height: 1.6;
     }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero .btn {
+        width: 190px;
+    }
+
+
+    /* FEATURE STRIP */
 
     .hero-feature {
         gap: 7px;
+
+        padding: 10px 6px;
     }
 
     .hero-feature strong {
@@ -1491,8 +1730,10 @@ img {
     }
 
 
+    /* BRANDS */
+
     .brands {
-        padding: 35px 0;
+        padding: 35px 15px;
     }
 
     .brands .section-heading h2 {
@@ -1503,11 +1744,11 @@ img {
         font-size: 12px;
     }
 
-    .brand-grid {
+    .brands .brand-grid {
         gap: 8px;
     }
 
-    .brand-card {
+    .brands .brand-card {
         height: 85px;
 
         padding: 8px;
@@ -1515,17 +1756,9 @@ img {
         border-radius: 9px;
     }
 
-    .brand-card img {
+    .brands .brand-card img {
         width: 105px;
         height: 48px;
     }
 
-
-    .why-card h3 {
-        font-size: 17px;
-    }
-
-    .why-card p {
-        font-size: 13px;
-    }
 }
