@@ -1,22 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
 
-    if (!menuToggle || !navMenu) {
-        return;
+    if (!menuToggle || !navMenu) return;
+
+    function closeMenu() {
+        navMenu.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
     }
 
     menuToggle.addEventListener("click", function () {
-        navMenu.classList.toggle("show");
+        const isOpen = navMenu.classList.toggle("show");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    const navLinks = navMenu.querySelectorAll("a");
-
-    navLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-            navMenu.classList.remove("show");
-        });
+    navMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
     });
 
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeMenu();
+    });
 });
