@@ -1,0 +1,74 @@
+name: Optimize website images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/optimize-images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install WebP tools
+        run: sudo apt-get update && sudo apt-get install -y webp
+      - name: Create optimized WebP product images
+        shell: bash
+        run: |
+          set -e
+          files=(
+            power-tiller-1.jpg
+            power-tiller-engine-2.jpg
+            ibeam-stone-cutter.jpg
+            bottom-cutter-gearbox.jpg
+            spareparts.jpg
+            bearings.jpg
+            lubricants.jpg
+            kayvee-oil-seals.jpg
+            bolts.png
+            fenner.jpg
+            diamond-chain.png
+            hand-tools.jpg
+          )
+          for file in "${files[@]}"; do
+            src="images/websiteimages/$file"
+            base="${file%.*}"
+            cwebp -quiet -q 82 -m 6 "$src" -o "images/websiteimages/$base.webp"
+          done
+      - name: Update product image references
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("index.html")
+          s = p.read_text()
+          replacements = {
+            "power-tiller-1.jpg":"power-tiller-1.webp",
+            "power-tiller-engine-2.jpg":"power-tiller-engine-2.webp",
+            "ibeam-stone-cutter.jpg":"ibeam-stone-cutter.webp",
+            "bottom-cutter-gearbox.jpg":"bottom-cutter-gearbox.webp",
+            "spareparts.jpg":"spareparts.webp",
+            "bearings.jpg":"bearings.webp",
+            "lubricants.jpg":"lubricants.webp",
+            "kayvee-oil-seals.jpg":"kayvee-oil-seals.webp",
+            "bolts.png":"bolts.webp",
+            "fenner.jpg":"fenner.webp",
+            "diamond-chain.png":"diamond-chain.webp",
+            "hand-tools.jpg":"hand-tools.webp",
+          }
+          for old, new in replacements.items():
+              s = s.replace("images/websiteimages/" + old, "images/websiteimages/" + new)
+          p.write_text(s)
+          PY
+      - name: Commit optimized assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/websiteimages/*.webp index.html
+          git commit -m "Optimize product images for web performance" || exit 0
+          git push
