@@ -131,12 +131,17 @@ nav a:hover::after {
 ===================================================== */
 .hero {
     position: relative;
-    background-color: #0d1e3d;
-    background-image: linear-gradient(rgba(13, 30, 61, 0.85), rgba(13, 30, 61, 0.85)), url("images/hero.png");
+    background-color: #f4f6f9;
+    background-image:
+        linear-gradient(90deg, rgba(248, 250, 253, 0.99) 0%, rgba(248, 250, 253, 0.96) 37%, rgba(248, 250, 253, 0.42) 53%, rgba(8, 23, 51, 0.04) 72%),
+        url("images/hero.png");
     background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    padding: 100px 0 140px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    color: #081733;
+    padding: 64px 0 112px;
+    min-height: 600px;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -145,23 +150,27 @@ nav a:hover::after {
 }
 
 .hero-text {
-    max-width: 650px;
+    max-width: 610px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-small-title {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #ff753a;
-    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #111827;
+    margin-bottom: 8px;
 }
 
 .hero h1 {
-    font-size: 46px;
-    line-height: 1.15;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 20px;
+    font-size: clamp(42px, 4vw, 62px);
+    line-height: 1.02;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    color: #08234f;
+    margin-bottom: 22px;
+    text-transform: uppercase;
 }
 
 .hero h1 span {
@@ -169,9 +178,10 @@ nav a:hover::after {
 }
 
 .hero-text p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #e2e8f0;
+    max-width: 540px;
+    font-size: 17px;
+    line-height: 1.55;
+    color: #172033;
     margin-bottom: 30px;
 }
 
@@ -194,22 +204,24 @@ nav a:hover::after {
 }
 
 .btn-call {
-    background: #ffffff;
-    color: #102d63;
+    background: #102d63;
+    color: #ffffff;
+    box-shadow: 0 7px 18px rgba(16, 45, 99, 0.18);
 }
 
 .btn-call:hover {
-    background: #eef3fa;
+    background: #081f49;
     transform: translateY(-2px);
 }
 
 .btn-whatsapp {
-    background: #25d366;
+    background: #ff5a16;
     color: #ffffff;
+    box-shadow: 0 7px 18px rgba(255, 90, 22, 0.2);
 }
 
 .btn-whatsapp:hover {
-    background: #1eb956;
+    background: #e84b0b;
     transform: translateY(-2px);
 }
 
@@ -229,7 +241,7 @@ nav a:hover::after {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(7, 24, 56, 0.95);
+    background: linear-gradient(90deg, #071b3e, #0d3268);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -750,16 +762,35 @@ nav a:hover::after {
     }
 
     .hero {
-        padding: 60px 0 200px;
+        min-height: auto;
+        padding: 52px 0 0;
+        background-image:
+            linear-gradient(rgba(248, 250, 253, 0.94), rgba(248, 250, 253, 0.92)),
+            url("images/hero.png");
+        background-position: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-small-title {
+        font-size: 14px;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: clamp(34px, 9vw, 46px);
+        letter-spacing: -0.7px;
+    }
+
+    .hero-text p {
+        color: #27364d;
+        font-size: 15px;
     }
 
     .hero-features {
         position: static;
-        margin-top: 30px;
+        margin-top: 42px;
     }
 
     .hero-features-grid {
