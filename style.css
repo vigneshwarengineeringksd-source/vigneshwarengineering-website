@@ -1205,3 +1205,10 @@ nav a:hover::after {
         padding: 8px;
     }
 }
+
+
+/* Balance logos with extra whitespace inside their source images */
+.brand-card--large img {
+    width: 158px;
+    height: 68px;
+}
