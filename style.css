@@ -1048,3 +1048,11 @@ nav a:hover::after {
     object-position: center;
     filter: saturate(0.98) contrast(1.02);
 }
+
+
+.whatsapp-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    color: #fff;
+}
