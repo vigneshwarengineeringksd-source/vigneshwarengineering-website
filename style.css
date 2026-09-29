@@ -139,8 +139,8 @@ nav a:hover::after {
     background-position: center right;
     background-repeat: no-repeat;
     color: #081733;
-    padding: 64px 0 112px;
-    min-height: 600px;
+    padding: 72px 0 118px;
+    min-height: 635px;
     overflow: hidden;
 }
 
@@ -150,13 +150,13 @@ nav a:hover::after {
 }
 
 .hero-text {
-    max-width: 610px;
+    max-width: 590px;
     position: relative;
     z-index: 2;
 }
 
 .hero-small-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
     letter-spacing: 0.5px;
     color: #111827;
@@ -164,12 +164,12 @@ nav a:hover::after {
 }
 
 .hero h1 {
-    font-size: clamp(42px, 4vw, 62px);
-    line-height: 1.02;
+    font-size: clamp(46px, 4.35vw, 66px);
+    line-height: 0.98;
     font-weight: 900;
-    letter-spacing: -1.5px;
+    letter-spacing: -1.8px;
     color: #08234f;
-    margin-bottom: 22px;
+    margin-bottom: 26px;
     text-transform: uppercase;
 }
 
@@ -178,8 +178,8 @@ nav a:hover::after {
 }
 
 .hero-text p {
-    max-width: 540px;
-    font-size: 17px;
+    max-width: 520px;
+    font-size: 18px;
     line-height: 1.55;
     color: #172033;
     margin-bottom: 30px;
@@ -195,10 +195,10 @@ nav a:hover::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 160px;
-    padding: 13px 24px;
-    border-radius: 6px;
-    font-size: 15px;
+    min-width: 190px;
+    padding: 15px 28px;
+    border-radius: 5px;
+    font-size: 16px;
     font-weight: 700;
     transition: all 0.25s ease;
 }
@@ -241,7 +241,7 @@ nav a:hover::after {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(90deg, #071b3e, #0d3268);
+    background: linear-gradient(90deg, rgba(7, 27, 62, 0.98), rgba(13, 50, 104, 0.94));
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -254,7 +254,7 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 18px 20px;
+    padding: 20px 18px;
     border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -265,8 +265,8 @@ nav a:hover::after {
 .feature-icon {
     width: 42px;
     height: 42px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -763,11 +763,11 @@ nav a:hover::after {
 
     .hero {
         min-height: auto;
-        padding: 52px 0 0;
+        padding: 46px 0 0;
         background-image:
-            linear-gradient(rgba(248, 250, 253, 0.94), rgba(248, 250, 253, 0.92)),
+            linear-gradient(180deg, rgba(248, 250, 253, 0.97) 0%, rgba(248, 250, 253, 0.91) 62%, rgba(248, 250, 253, 0.72) 100%),
             url("images/hero.png");
-        background-position: center;
+        background-position: 62% center;
     }
 
     .hero-text {
