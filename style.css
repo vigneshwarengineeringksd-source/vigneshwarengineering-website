@@ -860,3 +860,176 @@ nav a:hover::after {
         width: 100%;
     }
 }
+
+
+/* =====================================================
+   PREMIUM POLISH
+===================================================== */
+.section {
+    padding: 64px 0;
+}
+
+.section-heading {
+    margin-bottom: 32px;
+}
+
+.section-heading h2 {
+    letter-spacing: -0.5px;
+}
+
+.about-content {
+    max-width: 980px;
+}
+
+.about-text {
+    padding-left: 22px;
+    border-left: 3px solid #ff5a16;
+}
+
+.about-text p {
+    max-width: 940px;
+    line-height: 1.75;
+}
+
+.product-grid {
+    gap: 22px;
+}
+
+.product-card {
+    border-color: #dbe3ee;
+    box-shadow: 0 3px 12px rgba(16, 45, 99, 0.035);
+}
+
+.product-content {
+    padding: 20px 22px 22px;
+}
+
+.products-note {
+    margin-top: 36px;
+    padding: 28px 32px;
+    box-shadow: 0 12px 30px rgba(16, 45, 99, 0.12);
+}
+
+.brand-grid {
+    gap: 14px;
+}
+
+.brand-card {
+    height: 96px;
+    padding: 16px;
+    border-color: #dbe3ee;
+    box-shadow: 0 3px 12px rgba(16, 45, 99, 0.035);
+}
+
+.brand-card img {
+    width: 130px;
+    height: 56px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.why-grid {
+    gap: 18px;
+}
+
+.why-card {
+    min-height: 210px;
+    padding: 26px 22px;
+    border-color: #dbe3ee;
+    box-shadow: 0 3px 12px rgba(16, 45, 99, 0.035);
+}
+
+.why-icon {
+    box-shadow: 0 6px 16px rgba(16, 45, 99, 0.16);
+}
+
+.enquiry {
+    padding: 34px 0;
+}
+
+.contact-grid {
+    align-items: stretch;
+    gap: 48px;
+}
+
+.contact-item a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 90, 22, 0.35);
+    text-underline-offset: 3px;
+}
+
+.map {
+    min-height: 410px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(16, 45, 99, 0.10);
+}
+
+.footer {
+    padding-top: 48px;
+}
+
+.footer-grid {
+    padding-bottom: 38px;
+}
+
+.footer-logo {
+    height: 54px;
+    margin-bottom: 12px;
+}
+
+.footer-brand-name {
+    margin-bottom: 12px;
+}
+
+.footer-brand-name strong {
+    display: block;
+    font-size: 18px;
+    letter-spacing: .7px;
+    color: #ffffff;
+}
+
+.footer-brand-name span {
+    display: block;
+    margin-top: 1px;
+    color: #94a3b8;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 52px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 28px;
+    }
+
+    .about-text {
+        padding-left: 16px;
+    }
+
+    .brand-card {
+        height: 88px;
+    }
+
+    .why-card {
+        min-height: auto;
+    }
+
+    .map {
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 44px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+}
