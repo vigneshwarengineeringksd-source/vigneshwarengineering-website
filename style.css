@@ -1393,3 +1393,31 @@ a:focus-visible, button:focus-visible {
     .products .product-image { height: 225px; padding: 8px; }
     .floating-whatsapp { right: 16px; bottom: 16px; }
 }
+
+
+/* Final icon system */
+.btn .ui-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.hero-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+.feature-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
