@@ -147,6 +147,10 @@ nav a:hover::after {
 .hero-content {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: none;
+    padding-left: clamp(24px, 4vw, 64px);
+    padding-right: 5%;
 }
 
 .hero-text {
@@ -768,6 +772,11 @@ nav a:hover::after {
             linear-gradient(180deg, rgba(248, 250, 253, 0.97) 0%, rgba(248, 250, 253, 0.91) 62%, rgba(248, 250, 253, 0.72) 100%),
             url("images/hero.png");
         background-position: 62% center;
+    }
+
+    .hero-content {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .hero-text {
