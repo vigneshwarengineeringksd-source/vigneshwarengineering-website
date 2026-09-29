@@ -1219,3 +1219,10 @@ nav a:hover::after {
     width: 178px;
     height: 76px;
 }
+
+
+/* Final HCH and Castrol logo scale adjustment */
+.brand-card--large img {
+    width: 198px;
+    height: 82px;
+}
