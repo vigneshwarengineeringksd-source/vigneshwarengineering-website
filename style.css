@@ -1212,3 +1212,10 @@ nav a:hover::after {
     width: 158px;
     height: 68px;
 }
+
+
+/* Fine-tune HCH and Castrol visual size */
+.brand-card--large img {
+    width: 178px;
+    height: 76px;
+}
