@@ -1226,3 +1226,54 @@ nav a:hover::after {
     width: 198px;
     height: 82px;
 }
+
+
+/* Premium unified contact section */
+.contact-premium { background:#f7f9fc; }
+.contact-heading { max-width:680px; margin-bottom:34px; }
+.contact-heading p { margin-top:8px; color:#66758a; font-size:15px; }
+.contact-premium-shell {
+    display:grid; grid-template-columns:.9fr 1.25fr; min-height:500px;
+    background:#fff; border:1px solid #dfe6ef; border-radius:20px; overflow:hidden;
+    box-shadow:0 20px 55px rgba(8,23,51,.10);
+}
+.contact-premium-info {
+    background:linear-gradient(145deg,#0b2857 0%,#081d40 100%);
+    color:#fff; padding:38px 36px; display:flex; flex-direction:column;
+}
+.contact-intro { padding-bottom:23px; border-bottom:1px solid rgba(255,255,255,.12); margin-bottom:6px; }
+.contact-kicker { color:#ff7a42; font-size:10px; font-weight:800; letter-spacing:1.25px; }
+.contact-intro h3 { font-size:26px; margin:7px 0 6px; color:#fff; }
+.contact-intro p { color:#b9c7dc; font-size:14px; }
+.contact-detail { display:grid; grid-template-columns:42px 1fr; gap:14px; align-items:start; padding:16px 0; border-bottom:1px solid rgba(255,255,255,.1); }
+.contact-svg { width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:10px; background:rgba(255,255,255,.09); }
+.contact-svg svg { width:19px; height:19px; fill:none; stroke:#ff7a42; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.contact-detail small { display:block; color:#8fa5c4; font-size:9px; font-weight:800; letter-spacing:1.1px; margin-bottom:3px; }
+.contact-detail strong,.contact-detail strong a { color:#fff; font-size:14px; font-weight:650; }
+.contact-detail p,.contact-detail p a { color:#b9c7dc; font-size:13px; line-height:1.55; }
+.contact-detail a:hover { color:#ff8a58; }
+.contact-premium-actions { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:22px; }
+.contact-btn { display:block; text-align:center; padding:12px 14px; border-radius:8px; font-size:13px; font-weight:750; transition:.2s ease; }
+.contact-btn-light { background:#fff; color:#0b2857; }
+.contact-btn-light:hover { background:#ff5a16; color:#fff; transform:translateY(-1px); }
+.contact-btn-outline { border:1px solid rgba(255,255,255,.35); color:#fff; }
+.contact-btn-outline:hover { border-color:#ff7a42; color:#ff9a70; transform:translateY(-1px); }
+.contact-premium-map { position:relative; min-height:500px; border-radius:0; box-shadow:none; }
+.contact-premium-map iframe { display:block; width:100%; height:100%; min-height:500px; }
+.map-label {
+    position:absolute; left:22px; bottom:22px; padding:12px 16px; background:rgba(255,255,255,.96);
+    border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 8px 25px rgba(8,23,51,.14);
+}
+.map-label span { display:block; color:#ff5a16; font-size:9px; font-weight:800; letter-spacing:1px; margin-bottom:2px; }
+.map-label strong { color:#102d63; font-size:13px; }
+@media(max-width:900px){
+ .contact-premium-shell{grid-template-columns:1fr}
+ .contact-premium-map,.contact-premium-map iframe{min-height:380px}
+}
+@media(max-width:520px){
+ .contact-premium-info{padding:28px 20px}
+ .contact-intro h3{font-size:23px}
+ .contact-premium-actions{grid-template-columns:1fr}
+ .contact-premium-map,.contact-premium-map iframe{min-height:330px}
+ .map-label{left:14px;bottom:14px}
+}
